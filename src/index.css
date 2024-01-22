@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: white;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+span {
+    background: -webkit-linear-gradient(-45deg, #805ad5, #ed64a6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@layer base {
+    .desc {
+        @apply text-dark text-base;
+    }
+    .btn-primary {
+        @apply bg-primary duration-500 px-6  py-2 rounded-[6px] text-dark text-base font-medium;
+    }
+    .sub-head {
+        @apply text-2xl text-dark;
+    }
+    .heading {
+        @apply md:text-5xl text-3xl text-center pb-1  font-medium text-dark;
+    }
+}
