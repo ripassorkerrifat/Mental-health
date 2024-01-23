@@ -16,6 +16,7 @@ module.exports = {
             "warn",
             {allowConstantExport: true},
         ],
+        "eslint-disable-next-line react/prop-types": "disable",
         "no-unused-vars": "error",
         "react-hooks/rules-of-hooks": "error",
     },

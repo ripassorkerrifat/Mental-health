@@ -46,20 +46,6 @@ const Navbar = () => {
                     </li>
 
                     <li>
-                        <Link
-                            to="/about"
-                            className="inline-block hover:text-rose-500 duration-300 font-medium text-gray-100 text-lg">
-                            About
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            to="/contact"
-                            className="inline-block hover:text-rose-500 duration-300 font-medium text-gray-100 text-lg">
-                            Contact
-                        </Link>
-                    </li>
-                    <li>
                         <button className="py-1.5 btn-primary">Logout</button>
                     </li>
                 </ul>

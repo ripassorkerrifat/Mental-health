@@ -4,7 +4,7 @@ import Lottie from "lottie-react";
 
 const Banner = () => {
     return (
-        <div className="text-gray2 md:-mt-10 ">
+        <div className=" md:-mt-10 ">
             <div className="container grid md:grid-cols-2 md:gap-x-10 sm:py-12 ">
                 <div className="flex -z-40 items-center md:-ml-10 justify-center md:p-6 md:mt-8 md:mr-8 ">
                     <Lottie
