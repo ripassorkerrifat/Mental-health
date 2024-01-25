@@ -135,174 +135,7 @@
             }
         ]
     },
-    {
-        "id": 5,
-        "title": "Belly Breathing (Diaphragmatic Breathing)",
-        "desc": "Inhale deeply through your nose, allowing your belly to rise. Exhale slowly through your mouth, feeling your belly fall. This encourages relaxation and reduces stress. This type of breathing is commonly used in various relaxation exercises, meditation, and stress management. Here's how to practice belly breathing:",
-        "preoces": [
-            {
-                "step": "Find a Comfortable Position",
-                "desc": "Sit or lie down in a comfortable position. If sitting, ensure that your back is straight and your shoulders are relaxed."
-            },
-            {
-                "step": "Place Your Hands on Your Belly",
-                "desc": "Put one hand on your chest and the other on your abdomen, just above your navel. This will help you become aware of the movement of your diaphragm."
-            },
-            {
-                "step": "Inhale Slowly Through Your Nose",
-                "desc": "Inhale deeply and slowly through your nose. Focus on allowing your abdomen to expand, rather than your chest. You should feel your diaphragm moving downward, causing your belly to rise."
-            },
-            {
-                "step": "Exhale Slowly Through Your Mouth",
-                "desc": "Exhale slowly through your mouth or nose, allowing your abdomen to fall. Feel the gentle contraction of your diaphragm."
-            },
-            {
-                "step": "Be Mindful of Your Breath",
-                "desc": "Pay attention to the sensation of the breath as it enters and leaves your body. Focus on the rise and fall of your abdomen."
-            },
-            {
-                "step": "Maintain a Steady Rhythm",
-                "desc": "Establish a steady and comfortable rhythm of breathing. Inhale for a count, hold briefly, and exhale for a count. You can gradually increase the duration as you become more comfortable."
-            },
-            {
-                "step": "Release Tension",
-                "desc": "As you exhale, consciously release any tension or stress. Let go of any tightness in your muscles, especially around your shoulders and chest."
-            },
-            {
-                "step": "Practice Regularly",
-                "desc": "Incorporate belly breathing into your daily routine, especially during moments of stress or as part of a relaxation routine. Regular practice helps make this type of breathing more natural."
-            }
-        ]
-    },
-    {
-        "id": 6,
-        "title": "Alternate Nostril Breathing (Nadi Shodhana)",
-        "desc": "Use your thumb to close one nostril and inhale through the other. Switch nostrils and exhale. This practice can balance energy and promote mental clarity. Here's how to practice Alternate Nostril Breathing:",
-        "preoces": [
-            {
-                "step": "Find a Comfortable Seated Position",
-                "desc": "Sit in a comfortable cross-legged position on the floor or on a chair with your spine straight. Ensure your shoulders are relaxed."
-            },
-            {
-                "step": "Hand Position (Mudra)",
-                "desc": "Use your right thumb to close off your right nostril and your right ring finger to close off your left nostril. Your other fingers can rest gently on your forehead or in the space between your eyebrows."
-            },
-            {
-                "step": "Prepare for the Breath",
-                "desc": "Take a few natural breaths to settle into your seated position."
-            },
-            {
-                "step": "Close the Right Nostril",
-                "desc": "Use your right thumb to close off your right nostril. Inhale deeply and slowly through your left nostril."
-            },
-            {
-                "step": "Switch Nostrils",
-                "desc": "Close off your left nostril with your right ring finger, release your right nostril, and exhale slowly and completely through your right nostril."
-            },
-            {
-                "step": "Inhale Through the Right Nostril",
-                "desc": "Inhale deeply and slowly through your right nostril."
-            },
-            {
-                "step": "Switch Again",
-                "desc": "Close off your right nostril, release your left nostril, and exhale through your left nostril."
-            },
-            {
-                "step": "Repeat the Sequence",
-                "desc": "Continue this cycle, inhaling through one nostril and exhaling through the other. This completes one round."
-            },
-            {
-                "step": "Focus on Your Breath",
-                "desc": "As you practice, focus on the breath and the sensation of the air moving through each nostril. Keep your movements slow, deliberate, and controlled."
-            },
-            {
-                "step": "Complete Several Rounds",
-                "desc": "Aim to complete several rounds, gradually increasing the duration as you become more comfortable with the practice."
-            }
-        ]
-    },
-    {
-        "id": 7,
-        "title": "Progressive Muscle Relaxation with Breath",
-        "desc": "Inhale while tensing a muscle group, then exhale as you release the tension. Move through different muscle groups, promoting both physical and mental relaxation. Here's how to practice Progressive Muscle Relaxation with Breath:",
-        "preoces": [
-            {
-                "step": "Find a Comfortable Position",
-                "desc": "Sit or lie down in a comfortable position. Ensure that you won't be disturbed during the practice."
-            },
-            {
-                "step": "Deep Breaths",
-                "desc": "Begin with a few deep breaths. Inhale slowly through your nose, and exhale completely through your mouth. This helps to initiate a state of relaxation."
-            },
-            {
-                "step": "Tense and Release",
-                "desc": "Start with a specific muscle group, such as your forehead or jaw. Inhale deeply, and as you exhale, consciously tense the muscles in that area. Hold the tension briefly, and then release the muscles completely as you continue to exhale."
-            },
-            {
-                "step": "Focus on Breath",
-                "desc": "As you release the tension in each muscle group, maintain your focus on your breath. Inhale relaxation and exhale any residual tension."
-            },
-            {
-                "step": "Systematic Progression",
-                "desc": "Progress through various muscle groups, working your way down from your head to your toes. Common muscle groups include the forehead, eyes, cheeks, jaw, neck, shoulders, arms, chest, abdomen, back, hips, legs, and feet."
-            },
-            {
-                "step": "Use Breath to Amplify Relaxation",
-                "desc": "With each muscle group, synchronize the tension and release with your breath. Inhale as you tense the muscles, and exhale as you release. This coordination can deepen the sense of relaxation."
-            },
-            {
-                "step": "Pay Attention to Sensations",
-                "desc": "As you practice, pay attention to the sensations in each muscle group. Notice the difference between tension and relaxation."
-            },
-            {
-                "step": "Complete the Practice",
-                "desc": "Once you've systematically gone through all muscle groups, take a few moments to enjoy the overall sense of relaxation. Gradually bring your awareness back to your surroundings."
-            }
-        ]
-    },
-    {
-        "id": 8,
-        "title": "Humming Breath (Bhramari Pranayama)",
-        "desc": "Inhale deeply and exhale with a humming sound. This can have a calming effect on the nervous system and reduce stress. Here's how to practice Humming Breath:",
-        "preoces": [
-            {
-                "step": "Find a Comfortable Seated Position",
-                "desc": "Sit in a comfortable cross-legged position on the floor or on a chair with your spine straight. Relax your shoulders."
-            },
-            {
-                "step": "Close Your Eyes",
-                "desc": "Close your eyes to enhance your inward focus and concentration."
-            },
-            {
-                "step": "Place Your Hands",
-                "desc": "Rest your index fingers on your forehead, with the tips lightly touching the space between your eyebrows. Your other fingers can rest on your closed eyes or on your face."
-            },
-            {
-                "step": "Inhale Deeply",
-                "desc": "Inhale deeply and slowly through your nose. Focus on filling your lungs with air."
-            },
-            {
-                "step": "Exhale with a Humming Sound",
-                "desc": "As you exhale, close your lips and make a humming sound like a bee. Feel the vibration of the sound in your head and chest. Let the sound be continuous and steady."
-            },
-            {
-                "step": "Continue Humming",
-                "desc": "Keep humming for the entire duration of your exhalation. Allow the humming to be smooth and calming."
-            },
-            {
-                "step": "Focus on the Vibrations",
-                "desc": "Pay attention to the vibrations and the soothing resonance of the humming sound. Imagine the sound creating a sense of peace and tranquility within."
-            },
-            {
-                "step": "Inhale and Repeat",
-                "desc": "After completing the humming breath, inhale deeply and repeat the process for several rounds."
-            },
-            {
-                "step": "Release Your Hands",
-                "desc": "Once you've completed the rounds, release your hands and take a few natural breaths, noticing any changes in your body and mind."
-            }
-        ]
-    },
+
     {
         "id": 9,
         "title": "Guided Imagery Breathing",
@@ -472,6 +305,174 @@
             {
                 "step": "Practice for a Set Duration",
                 "desc": "Practice Resonant Breathing for a set duration, such as 5-10 minutes, gradually extending the time as you become more comfortable with the technique."
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Belly Breathing (Diaphragmatic Breathing)",
+        "desc": "Inhale deeply through your nose, allowing your belly to rise. Exhale slowly through your mouth, feeling your belly fall. This encourages relaxation and reduces stress. This type of breathing is commonly used in various relaxation exercises, meditation, and stress management. Here's how to practice belly breathing:",
+        "preoces": [
+            {
+                "step": "Find a Comfortable Position",
+                "desc": "Sit or lie down in a comfortable position. If sitting, ensure that your back is straight and your shoulders are relaxed."
+            },
+            {
+                "step": "Place Your Hands on Your Belly",
+                "desc": "Put one hand on your chest and the other on your abdomen, just above your navel. This will help you become aware of the movement of your diaphragm."
+            },
+            {
+                "step": "Inhale Slowly Through Your Nose",
+                "desc": "Inhale deeply and slowly through your nose. Focus on allowing your abdomen to expand, rather than your chest. You should feel your diaphragm moving downward, causing your belly to rise."
+            },
+            {
+                "step": "Exhale Slowly Through Your Mouth",
+                "desc": "Exhale slowly through your mouth or nose, allowing your abdomen to fall. Feel the gentle contraction of your diaphragm."
+            },
+            {
+                "step": "Be Mindful of Your Breath",
+                "desc": "Pay attention to the sensation of the breath as it enters and leaves your body. Focus on the rise and fall of your abdomen."
+            },
+            {
+                "step": "Maintain a Steady Rhythm",
+                "desc": "Establish a steady and comfortable rhythm of breathing. Inhale for a count, hold briefly, and exhale for a count. You can gradually increase the duration as you become more comfortable."
+            },
+            {
+                "step": "Release Tension",
+                "desc": "As you exhale, consciously release any tension or stress. Let go of any tightness in your muscles, especially around your shoulders and chest."
+            },
+            {
+                "step": "Practice Regularly",
+                "desc": "Incorporate belly breathing into your daily routine, especially during moments of stress or as part of a relaxation routine. Regular practice helps make this type of breathing more natural."
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Alternate Nostril Breathing (Nadi Shodhana)",
+        "desc": "Use your thumb to close one nostril and inhale through the other. Switch nostrils and exhale. This practice can balance energy and promote mental clarity. Here's how to practice Alternate Nostril Breathing:",
+        "preoces": [
+            {
+                "step": "Find a Comfortable Seated Position",
+                "desc": "Sit in a comfortable cross-legged position on the floor or on a chair with your spine straight. Ensure your shoulders are relaxed."
+            },
+            {
+                "step": "Hand Position (Mudra)",
+                "desc": "Use your right thumb to close off your right nostril and your right ring finger to close off your left nostril. Your other fingers can rest gently on your forehead or in the space between your eyebrows."
+            },
+            {
+                "step": "Prepare for the Breath",
+                "desc": "Take a few natural breaths to settle into your seated position."
+            },
+            {
+                "step": "Close the Right Nostril",
+                "desc": "Use your right thumb to close off your right nostril. Inhale deeply and slowly through your left nostril."
+            },
+            {
+                "step": "Switch Nostrils",
+                "desc": "Close off your left nostril with your right ring finger, release your right nostril, and exhale slowly and completely through your right nostril."
+            },
+            {
+                "step": "Inhale Through the Right Nostril",
+                "desc": "Inhale deeply and slowly through your right nostril."
+            },
+            {
+                "step": "Switch Again",
+                "desc": "Close off your right nostril, release your left nostril, and exhale through your left nostril."
+            },
+            {
+                "step": "Repeat the Sequence",
+                "desc": "Continue this cycle, inhaling through one nostril and exhaling through the other. This completes one round."
+            },
+            {
+                "step": "Focus on Your Breath",
+                "desc": "As you practice, focus on the breath and the sensation of the air moving through each nostril. Keep your movements slow, deliberate, and controlled."
+            },
+            {
+                "step": "Complete Several Rounds",
+                "desc": "Aim to complete several rounds, gradually increasing the duration as you become more comfortable with the practice."
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Progressive Muscle Relaxation with Breath",
+        "desc": "Inhale while tensing a muscle group, then exhale as you release the tension. Move through different muscle groups, promoting both physical and mental relaxation. Here's how to practice Progressive Muscle Relaxation with Breath:",
+        "preoces": [
+            {
+                "step": "Find a Comfortable Position",
+                "desc": "Sit or lie down in a comfortable position. Ensure that you won't be disturbed during the practice."
+            },
+            {
+                "step": "Deep Breaths",
+                "desc": "Begin with a few deep breaths. Inhale slowly through your nose, and exhale completely through your mouth. This helps to initiate a state of relaxation."
+            },
+            {
+                "step": "Tense and Release",
+                "desc": "Start with a specific muscle group, such as your forehead or jaw. Inhale deeply, and as you exhale, consciously tense the muscles in that area. Hold the tension briefly, and then release the muscles completely as you continue to exhale."
+            },
+            {
+                "step": "Focus on Breath",
+                "desc": "As you release the tension in each muscle group, maintain your focus on your breath. Inhale relaxation and exhale any residual tension."
+            },
+            {
+                "step": "Systematic Progression",
+                "desc": "Progress through various muscle groups, working your way down from your head to your toes. Common muscle groups include the forehead, eyes, cheeks, jaw, neck, shoulders, arms, chest, abdomen, back, hips, legs, and feet."
+            },
+            {
+                "step": "Use Breath to Amplify Relaxation",
+                "desc": "With each muscle group, synchronize the tension and release with your breath. Inhale as you tense the muscles, and exhale as you release. This coordination can deepen the sense of relaxation."
+            },
+            {
+                "step": "Pay Attention to Sensations",
+                "desc": "As you practice, pay attention to the sensations in each muscle group. Notice the difference between tension and relaxation."
+            },
+            {
+                "step": "Complete the Practice",
+                "desc": "Once you've systematically gone through all muscle groups, take a few moments to enjoy the overall sense of relaxation. Gradually bring your awareness back to your surroundings."
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Humming Breath (Bhramari Pranayama)",
+        "desc": "Inhale deeply and exhale with a humming sound. This can have a calming effect on the nervous system and reduce stress. Here's how to practice Humming Breath:",
+        "preoces": [
+            {
+                "step": "Find a Comfortable Seated Position",
+                "desc": "Sit in a comfortable cross-legged position on the floor or on a chair with your spine straight. Relax your shoulders."
+            },
+            {
+                "step": "Close Your Eyes",
+                "desc": "Close your eyes to enhance your inward focus and concentration."
+            },
+            {
+                "step": "Place Your Hands",
+                "desc": "Rest your index fingers on your forehead, with the tips lightly touching the space between your eyebrows. Your other fingers can rest on your closed eyes or on your face."
+            },
+            {
+                "step": "Inhale Deeply",
+                "desc": "Inhale deeply and slowly through your nose. Focus on filling your lungs with air."
+            },
+            {
+                "step": "Exhale with a Humming Sound",
+                "desc": "As you exhale, close your lips and make a humming sound like a bee. Feel the vibration of the sound in your head and chest. Let the sound be continuous and steady."
+            },
+            {
+                "step": "Continue Humming",
+                "desc": "Keep humming for the entire duration of your exhalation. Allow the humming to be smooth and calming."
+            },
+            {
+                "step": "Focus on the Vibrations",
+                "desc": "Pay attention to the vibrations and the soothing resonance of the humming sound. Imagine the sound creating a sense of peace and tranquility within."
+            },
+            {
+                "step": "Inhale and Repeat",
+                "desc": "After completing the humming breath, inhale deeply and repeat the process for several rounds."
+            },
+            {
+                "step": "Release Your Hands",
+                "desc": "Once you've completed the rounds, release your hands and take a few natural breaths, noticing any changes in your body and mind."
             }
         ]
     },

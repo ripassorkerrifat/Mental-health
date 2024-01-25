@@ -1,20 +1,25 @@
 /* eslint-disable react/no-unescaped-entities */
 import {useFormik} from "formik";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {loginSchema} from "../../schemas";
+import {config} from "../../utils/envCongif";
+import toast from "react-hot-toast";
+import {useUserContext} from "../../context/AuthProvider";
+import {useEffect} from "react";
 
 const LoginPage = () => {
-    // const {setToken, setLoading, userId, setUserId} = useUserContext();
+    const {setToken, setLoading, token} = useUserContext();
+    const navigate = useNavigate();
 
     const initialLoginValues = {
         email: "",
         password: "",
     };
-    // useEffect(() => {
-    //     if (userId) {
-    //         router.push("/");
-    //     }
-    // }, [userId]);
+    useEffect(() => {
+        if (token) {
+            navigate("/");
+        }
+    }, [token]);
 
     const {values, errors, touched, handleBlur, handleChange, handleSubmit} =
         useFormik({
@@ -27,44 +32,40 @@ const LoginPage = () => {
                     password,
                 };
 
-                console.log(loginInfo);
-
-                // fetch(`https://eduphy-server.vercel.app/api/v1/auth/login`, {
-                //     method: "POST",
-                //     headers: {
-                //         "content-type": "application/json",
-                //     },
-                //     body: JSON.stringify(loginInfo),
-                // })
-                //     .then((res) => res.json())
-                //     .then((data) => {
-                //         if (data.success) {
-                //             localStorage.setItem(
-                //                 "accessToken",
-                //                 data.data.accessToken
-                //             );
-                //             localStorage.setItem("userId", data.data.id);
-                //             setUserId(data.data.id);
-                //             setToken(data.data.accessToken);
-                //             // router.push("/");
-                //             setLoading(false);
-
-                //             toast.success("User Logged Successfully.");
-                //             action.resetForm();
-                //         } else {
-                //             console.log(data.errorMessage[0].message);
-                //             return toast.error(data.errorMessage[0].message);
-                //         }
-                //     })
-                //     .catch((err) => {
-                //         return toast.error(err);
-                //     });
+                fetch(`${config.base_url}/auth/login`, {
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json",
+                    },
+                    body: JSON.stringify(loginInfo),
+                })
+                    .then((res) => res.json())
+                    .then((data) => {
+                        if (data.success) {
+                            console.log(data.data);
+                            localStorage.setItem(
+                                "accessToken",
+                                data.data.accessToken
+                            );
+                            setToken(data.data.accessToken);
+                            setLoading(false);
+                            navigate("/");
+                            toast.success("User Logged Successfully.");
+                            action.resetForm();
+                        } else {
+                            console.log(data.errorMessage[0].message);
+                            return toast.error(data.errorMessage[0].message);
+                        }
+                    })
+                    .catch((err) => {
+                        return toast.error(err);
+                    });
             },
         });
 
     return (
-        <div className="bg-slate-950">
-            <div className="h-screen w-full  py-12 pt-16">
+        <div className="bg-gray-950">
+            <div className="h-screen w-full  py-12 pt-20">
                 <div className="container ">
                     <div className=" flex flex-col justify-center py-14">
                         <div className="relative py-3 sm:max-w-xl sm:mx-auto mx-2">
@@ -138,13 +139,13 @@ const LoginPage = () => {
                                                     Login
                                                 </button>
                                             </div>
-                                            <p className="max-w-xs text-base">
+                                            <p className="">
                                                 If you don't have an account?
                                                 Please{" "}
                                                 <Link
-                                                    to={"/registration"}
-                                                    className="text-[#00bd29] underline">
-                                                    Sing up{" "}
+                                                    className="text-blue-600 decoration-2 hover:underline font-medium "
+                                                    to={"/registration"}>
+                                                    <span>Sing up </span>{" "}
                                                 </Link>
                                                 now
                                             </p>

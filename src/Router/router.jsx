@@ -4,6 +4,7 @@ import Home from "../pages/Home/Home";
 import About from "../pages/About/About";
 import Registaion from "../pages/Registation/Registaion";
 import LoginPage from "../pages/Login/Login";
+import PrivetRouter from "./PrivetRouter";
 
 export const router = createBrowserRouter([
     {
@@ -24,7 +25,11 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: "/",
-                element: <Home />,
+                element: (
+                    <PrivetRouter>
+                        <Home />
+                    </PrivetRouter>
+                ),
             },
             {
                 path: "/about",

@@ -16,7 +16,7 @@ export default function BreathingDetails({
                                 {/*header*/}
                                 <div className="flex items-start justify-between md:px-10 p-5 border-b border-solid border-blueGray-200 rounded-t">
                                     <h3 className="text-2xl font-semibold text-dark">
-                                        {currentData.title}
+                                      <span>  {currentData.title}</span>
                                     </h3>
                                     <button
                                         className="p-1 ml-auto  float-right text-2xl  leading-none font-semibold outline-none focus:outline-none"

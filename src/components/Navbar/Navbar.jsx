@@ -2,9 +2,35 @@ import {useState} from "react";
 import {Link} from "react-router-dom";
 import {HiBars3} from "react-icons/hi2";
 import {MdOutlineCancel} from "react-icons/md";
+import {useUserContext} from "../../context/AuthProvider";
+import {config} from "../../utils/envCongif";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
+    const {user, setUser, token, setToken} = useUserContext();
     const [open, setOpen] = useState(false);
+
+    const handleLogout = () => {
+        localStorage.removeItem("accessToken");
+        setToken("");
+        setUser(null);
+
+        fetch(`${config.base_url}/auth/logout`, {
+            headers: {
+                Authorization: `${token}`,
+            },
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                if (data.success) {
+                    toast.success("Logout successful");
+                }
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    };
+
     return (
         <nav className="bg-[#0d1117] sticky -top-0 right-0 z-[99999999]  md:py-3 py-2">
             <div className="flex items-center font-medium justify-between container">
@@ -46,7 +72,11 @@ const Navbar = () => {
                     </li>
 
                     <li>
-                        <button className="py-1.5 btn-primary">Logout</button>
+                        <button
+                            onClick={handleLogout}
+                            className="py-1.5 btn-primary">
+                            Logout
+                        </button>
                     </li>
                 </ul>
                 <ul

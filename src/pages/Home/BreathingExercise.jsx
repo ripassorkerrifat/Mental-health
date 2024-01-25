@@ -24,14 +24,14 @@ const BreathingExercise = () => {
                 {data?.map((d, i) => (
                     <div
                         key={i}
-                        className="flex flex-col bg-primary border shadow-sm rounded-lg ">
+                        className="flex flex-col bg-primary border shadow-sm rounded-lg md:p-0 p-4">
                         <div className="p-4 md:p-5">
                             <h3 className="text-lg font-bold text-dark">
                                 {d?.title}
                             </h3>
                             <p className="text-gray-700 text-base">
-                                {d?.desc?.length > 50
-                                    ? d?.desc?.slice(0, 50)
+                                {d?.desc?.length > 65
+                                    ? `${d?.desc?.slice(0, 64)}...`
                                     : desc}
                             </p>
                             <div className="mt-2  text-base font-semibold rounded-lg ">
