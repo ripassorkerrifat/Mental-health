@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import {useFormik} from "formik";
-import {Link, useNavigate} from "react-router-dom";
+import {Link, useLocation, useNavigate} from "react-router-dom";
 import {loginSchema} from "../../schemas";
 import {config} from "../../utils/envCongif";
 import toast from "react-hot-toast";
@@ -10,6 +10,9 @@ import {useEffect} from "react";
 const LoginPage = () => {
     const {setToken, setLoading, token} = useUserContext();
     const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || "/";
 
     const initialLoginValues = {
         email: "",
@@ -17,7 +20,7 @@ const LoginPage = () => {
     };
     useEffect(() => {
         if (token) {
-            navigate("/");
+            navigate(from, {replace: true});
         }
     }, [token]);
 
@@ -49,7 +52,7 @@ const LoginPage = () => {
                             );
                             setToken(data.data.accessToken);
                             setLoading(false);
-                            navigate("/");
+                            navigate(from, {replace: true});
                             toast.success("User Logged Successfully.");
                             action.resetForm();
                         } else {

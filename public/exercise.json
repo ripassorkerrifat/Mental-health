@@ -1,6 +1,7 @@
 [
     {
         "id": 1,
+        "deley": 0.1,
         "title": "Mindful Breathing",
         "desc": "Pay close attention to your breath, focusing on the sensation of each inhale and exhale. This mindfulness practice can help anchor you in the present moment. Here's a simple guide to mindful breathing",
         "preoces": [
@@ -36,6 +37,7 @@
     },
     {
         "id": 2,
+        "deley": 0.2,
         "title": "5-5-5 Breathing",
         "desc": "Inhale slowly for a count of five, hold your breath for five counts, and exhale for five counts. This balanced breathing technique can provide a sense of stability. Here's how you can practice it.",
         "preoces": [
@@ -71,6 +73,7 @@
     },
     {
         "id": 3,
+        "deley": 0.3,
         "title": "Square Breathing",
         "desc": "Inhale for a count of four, hold for four, exhale for four, and pause for four. Visualize each side of the square as you breathe, promoting a sense of control and stability. Here's how to practice square breathing:",
         "preoces": [
@@ -102,6 +105,7 @@
     },
     {
         "id": 4,
+        "deley": 0.4,
         "title": "Lion's Breath",
         "desc": "Inhale deeply through your nose, then exhale forcefully through your mouth while sticking out your tongue. This can release tension and promote a sense of liberation. Here's how you can practice Lion's Breath:",
         "preoces": [
@@ -138,6 +142,7 @@
 
     {
         "id": 9,
+        "deley": 0.5,
         "title": "Guided Imagery Breathing",
         "desc": "Inhale while visualizing a peaceful scene, and exhale while imagining releasing any stress or tension. This combines breath awareness with the power of positive visualization. Here's how to practice Guided Imagery Breathing:",
         "preoces": [
@@ -181,6 +186,7 @@
     },
     {
         "id": 10,
+        "deley": 0.6,
         "title": "4-4-8 Breathing",
         "desc": "Inhale quietly through your nose for a count of four, hold your breath for four, and exhale completely through your mouth for eight. This can promote a sense of calmness and balance. This practice is designed to promote relaxation and a sense of calm. Here's how to practice 4-4-8 breathing:",
         "preoces": [
@@ -224,6 +230,7 @@
     },
     {
         "id": 11,
+        "deley": 0.7,
         "title": "Sama Vritti (Equal Breathing)",
         "desc": "Inhale and exhale for an equal count (e.g., inhale for four, exhale for four). This rhythmic breathing can help synchronize your breath and calm the mind. This practice can help calm the nervous system, promote focus, and induce a sense of balance and tranquility. Here's how to practice Sama Vritti:",
         "preoces": [
@@ -267,6 +274,7 @@
     },
     {
         "id": 12,
+        "deley": 0.8,
         "title": "Resonant Breathing",
         "desc": "Find a comfortable breathing rate, typically around six breaths per minute. This resonant frequency can help balance the autonomic nervous system and reduce stress. This practice aims to bring about a state of coherence, which is associated with increased mental clarity, emotional stability, and relaxation. Here's how to practice Resonant Breathing:",
         "preoces": [
@@ -310,6 +318,7 @@
     },
     {
         "id": 5,
+        "deley": 0.9,
         "title": "Belly Breathing (Diaphragmatic Breathing)",
         "desc": "Inhale deeply through your nose, allowing your belly to rise. Exhale slowly through your mouth, feeling your belly fall. This encourages relaxation and reduces stress. This type of breathing is commonly used in various relaxation exercises, meditation, and stress management. Here's how to practice belly breathing:",
         "preoces": [
@@ -349,6 +358,7 @@
     },
     {
         "id": 6,
+        "deley": 1.0,
         "title": "Alternate Nostril Breathing (Nadi Shodhana)",
         "desc": "Use your thumb to close one nostril and inhale through the other. Switch nostrils and exhale. This practice can balance energy and promote mental clarity. Here's how to practice Alternate Nostril Breathing:",
         "preoces": [
@@ -396,6 +406,7 @@
     },
     {
         "id": 7,
+        "deley": 1.1,
         "title": "Progressive Muscle Relaxation with Breath",
         "desc": "Inhale while tensing a muscle group, then exhale as you release the tension. Move through different muscle groups, promoting both physical and mental relaxation. Here's how to practice Progressive Muscle Relaxation with Breath:",
         "preoces": [
@@ -435,6 +446,7 @@
     },
     {
         "id": 8,
+        "deley": 1.2,
         "title": "Humming Breath (Bhramari Pranayama)",
         "desc": "Inhale deeply and exhale with a humming sound. This can have a calming effect on the nervous system and reduce stress. Here's how to practice Humming Breath:",
         "preoces": [
@@ -478,6 +490,7 @@
     },
     {
         "id": 13,
+        "deley": 1.3,
         "title": "Body-Scan Meditation",
         "desc": "Combine slow, deep breaths with a mental scan of your body. Inhale, directing your attention to one part of your body, and exhale, releasing any tension in that area. Here's a guide on how to practice body-scan meditation:",
         "preoces": [
@@ -529,6 +542,7 @@
     },
     {
         "id": 14,
+        "deley": 1.4,
         "title": "Triangle Breathing",
         "desc": "Inhale for a count of three, hold for three, exhale for three. Visualize an equilateral triangle as you move through each phase, providing a structured and calming rhythm. Here's a guide on how to practice Triangle Breathing:",
         "preoces": [

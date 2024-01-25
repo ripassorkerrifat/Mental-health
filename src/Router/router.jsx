@@ -5,6 +5,8 @@ import About from "../pages/About/About";
 import Registaion from "../pages/Registation/Registaion";
 import LoginPage from "../pages/Login/Login";
 import PrivetRouter from "./PrivetRouter";
+import BrethingExescisePage from "../pages/BrethingExescisePage/BrethingExescisePage";
+import DashboardLayout from "../layout/DashboardLayout";
 
 export const router = createBrowserRouter([
     {
@@ -32,8 +34,72 @@ export const router = createBrowserRouter([
                 ),
             },
             {
-                path: "/about",
-                element: <About />,
+                path: "/breathing-exercises",
+                element: (
+                    <PrivetRouter>
+                        <BrethingExescisePage />
+                    </PrivetRouter>
+                ),
+            },
+        ],
+    },
+
+    {
+        path: "/dashboard",
+        element: (
+            <PrivetRouter>
+                <DashboardLayout />
+            </PrivetRouter>
+        ),
+        children: [
+            {
+                path: "/dashboard/journaling",
+                element: (
+                    <div>
+                        hello Lorem ipsum <br /> dolor sit <br />
+                        amet consectetur adipisicing elit. Laudantium a dicta
+                        perferendis <br />
+                        non voluptate, amet, expedita atque
+                        <br /> praesentium neque placeat, repellendus porro{" "}
+                        <br />
+                        dita atque
+                        <br /> praesentium neque placeat, repellendus porro{" "}
+                        <br />
+                        aperiam.
+                        <br /> Corporis, voluptates. Corporis non amet dolorem
+                        nemo
+                        <br />. journalist hello Lorem ipsum <br /> dolor sit{" "}
+                        <br />
+                        or sit <br />
+                        amet consectetur adipisicing elit. Laudantium a dicta
+                        perferendis <br />
+                        non voluptate, amet, expedita atque
+                        <br /> praesentium neque placeat, repellendus porro{" "}
+                        <br />
+                        aperiam.
+                        <br /> Corporis, voluptates. Corporis non amet dolorem
+                        nemo
+                        <br />. journalist
+                        <br />. journalist
+                    </div>
+                ),
+            },
+            {
+                path: "/dashboard/profile",
+                element: (
+                    <div>
+                        hello Lorem ipsum <br /> dolor sit <br />
+                        amet consectetur adipisicing elit. Laudantium a dicta
+                        perferendis <br />
+                        <br /> praesentium neque placeat, repellendus porro{" "}
+                        <br />
+                        aperiam.
+                        <br /> Corporis, voluptates. Corporis non amet dolorem
+                        nemo
+                        <br />. journalist
+                        <br />. journalist
+                    </div>
+                ),
             },
         ],
     },

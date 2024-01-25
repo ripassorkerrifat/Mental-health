@@ -23,7 +23,7 @@ const Navbar = () => {
             .then((res) => res.json())
             .then((data) => {
                 if (data.success) {
-                    toast.success("Logout successful");
+                    toast.success("Logout successfully.");
                 }
             })
             .catch((err) => {
@@ -32,7 +32,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="bg-[#0d1117] sticky -top-0 right-0 z-[99999999]  md:py-3 py-2">
+        <nav className="bg-pink-400 sticky -top-0 right-0 z-[99999999]  md:py-3 py-2">
             <div className="flex items-center font-medium justify-between container">
                 <div className="md:w-auto w-full flex justify-between items-center">
                     <Link to="/" className="inline-flex items-center">
@@ -52,21 +52,28 @@ const Navbar = () => {
                     <li>
                         <Link
                             to="/"
-                            className="inline-block hover:text-rose-500 duration-300 font-medium text-gray-100 text-lg">
+                            className="inline-block hover:text-gray-900 duration-300 font-medium text-gray-800 text-lg">
                             Home
                         </Link>
                     </li>
                     <li>
                         <Link
                             to="/services"
-                            className="inline-block hover:text-rose-500 duration-300 font-medium text-gray-100 text-lg">
+                            className="inline-block hover:text-gray-900 duration-300 font-medium text-gray-800 text-lg">
                             Journaling
                         </Link>
                     </li>
                     <li>
                         <Link
-                            to="/portfolio"
-                            className="inline-block hover:text-rose-500 duration-300 font-medium text-gray-100 text-lg">
+                            to="/breathing-exercises"
+                            className="inline-block hover:text-gray-900 duration-300 font-medium text-gray-800 text-lg">
+                            Exersices
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to="/dashboard/profile"
+                            className="inline-block hover:text-gray-900 duration-300 font-medium text-gray-800 text-lg">
                             Dashboard
                         </Link>
                     </li>
@@ -87,7 +94,7 @@ const Navbar = () => {
                     <li className="mt-14">
                         <Link
                             to="/"
-                            className="inline-block hover:text-rose-500 duration-300 font-medium text-gray-100 text-lg px-3">
+                            className="inline-block hover:text-gray-900 duration-300 font-medium text-gray-800 text-lg px-3">
                             Home
                         </Link>
                     </li>
@@ -95,21 +102,21 @@ const Navbar = () => {
                     <li>
                         <Link
                             to="/services"
-                            className="inline-block hover:text-rose-500 duration-300 font-medium text-gray-100 text-lg px-3">
+                            className="inline-block hover:text-gray-900 duration-300 font-medium text-gray-800 text-lg px-3">
                             Services
                         </Link>
                     </li>
                     <li>
                         <Link
                             to="/portfolio"
-                            className="inline-block hover:text-rose-500 duration-300 font-medium text-gray-100 text-lg px-3">
+                            className="inline-block hover:text-gray-900 duration-300 font-medium text-gray-800 text-lg px-3">
                             Portfolio
                         </Link>
                     </li>
                     <li>
                         <Link
                             to="/pricing"
-                            className="inline-block hover:text-rose-500 duration-300 font-medium text-gray-100 text-lg px-3">
+                            className="inline-block hover:text-gray-900 duration-300 font-medium text-gray-800 text-lg px-3">
                             Pricing
                         </Link>
                     </li>

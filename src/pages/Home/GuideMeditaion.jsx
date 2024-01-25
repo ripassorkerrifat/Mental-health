@@ -1,15 +1,19 @@
 /* eslint-disable react/no-unescaped-entities */
 import Container from "../../utils/Container";
 import Heading from "../../utils/Heading";
+import {motion} from "framer-motion";
 
 const GuideMeditaion = () => {
     return (
         <Container>
-            <div className="mb-6">
+            <div className="">
                 <Heading clases={"text-center"} title={"Guide meditaions"} />
             </div>
-            <div className="grid lg:grid-cols-5 md:grid-cols-3 grid-cols-1 gap-10 ">
-                <div className="flex flex-col justify-center items-center text-center bg-primary border shadow-sm rounded-lg group">
+            <div className="grid lg:grid-cols-5 md:grid-cols-3 grid-cols-1 gap-10 mt-16">
+                <motion.div
+                    whileInView={{opacity: [0, 1], x: [-20, 0]}}
+                    transition={{duration: 0.5, delay: 0.3}}
+                    className="flex flex-col justify-center items-center text-center bg-primary border shadow-sm rounded-lg group">
                     <div className="p-4 md:p-5 ">
                         <div className="h-14  m-auto w-14">
                             <img
@@ -39,8 +43,11 @@ const GuideMeditaion = () => {
                             </svg>
                         </div>
                     </div>
-                </div>
-                <div className="flex flex-col justify-center items-center text-center bg-primary border shadow-sm rounded-lg group">
+                </motion.div>
+                <motion.div
+                    whileInView={{opacity: [0, 1], x: [-20, 0]}}
+                    transition={{duration: 0.5, delay: 0.5}}
+                    className="flex flex-col justify-center items-center text-center bg-primary border shadow-sm rounded-lg group">
                     <div className="p-4 md:p-5 ">
                         <div className="h-14  m-auto w-14">
                             <img
@@ -70,8 +77,11 @@ const GuideMeditaion = () => {
                             </svg>
                         </div>
                     </div>
-                </div>
-                <div className="flex flex-col justify-center items-center text-center bg-primary border shadow-sm rounded-lg group">
+                </motion.div>
+                <motion.div
+                    whileInView={{opacity: [0, 1], x: [-20, 0]}}
+                    transition={{duration: 0.5, delay: 0.7}}
+                    className="flex flex-col justify-center items-center text-center bg-primary border shadow-sm rounded-lg group">
                     <div className="p-4 md:p-5 ">
                         <div className="h-14  m-auto w-14">
                             <img
@@ -101,8 +111,11 @@ const GuideMeditaion = () => {
                             </svg>
                         </div>
                     </div>
-                </div>
-                <div className="flex flex-col justify-center items-center text-center bg-primary border shadow-sm rounded-lg group">
+                </motion.div>
+                <motion.div
+                    whileInView={{opacity: [0, 1], x: [-20, 0]}}
+                    transition={{duration: 0.5, delay: 0.9}}
+                    className="flex flex-col justify-center items-center text-center bg-primary border shadow-sm rounded-lg group">
                     <div className="p-4 md:p-5 ">
                         <div className="h-14  m-auto w-14">
                             <img
@@ -132,8 +145,11 @@ const GuideMeditaion = () => {
                             </svg>
                         </div>
                     </div>
-                </div>
-                <div className="flex flex-col justify-center items-center text-center bg-primary border shadow-sm rounded-lg group">
+                </motion.div>
+                <motion.div
+                    whileInView={{opacity: [0, 1], x: [-20, 0]}}
+                    transition={{duration: 0.5, delay: 1.1}}
+                    className="flex flex-col justify-center items-center text-center bg-primary border shadow-sm rounded-lg group">
                     <div className="p-4 md:p-5 ">
                         <div className="h-14  m-auto w-14">
                             <img
@@ -163,7 +179,7 @@ const GuideMeditaion = () => {
                             </svg>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </Container>
     );

@@ -1,4 +1,5 @@
 import {ImCancelCircle} from "react-icons/im";
+import {motion} from "framer-motion";
 
 export default function BreathingDetails({
     currentData,
@@ -16,7 +17,7 @@ export default function BreathingDetails({
                                 {/*header*/}
                                 <div className="flex items-start justify-between md:px-10 p-5 border-b border-solid border-blueGray-200 rounded-t">
                                     <h3 className="text-2xl font-semibold text-dark">
-                                      <span>  {currentData.title}</span>
+                                        <span> {currentData.title}</span>
                                     </h3>
                                     <button
                                         className="p-1 ml-auto  float-right text-2xl  leading-none font-semibold outline-none focus:outline-none"
@@ -25,7 +26,10 @@ export default function BreathingDetails({
                                     </button>
                                 </div>
                                 {/*body*/}
-                                <div className="relative md:px-10 p-5 flex-auto text-gray-800">
+                                <motion.div
+                                    whileInView={{opacity: [0, 1], y: [20, 0]}}
+                                    transition={{duration: 0.9}}
+                                    className="relative md:px-10 p-5 flex-auto text-gray-800">
                                     <div>
                                         <p className=" text-lg leading-relaxed">
                                             <b>Introduction : </b>{" "}
@@ -37,7 +41,7 @@ export default function BreathingDetails({
                                             </li>
                                         ))}
                                     </div>
-                                </div>
+                                </motion.div>
                                 {/*footer*/}
                                 <div className="flex items-center justify-end  border-t border-solid border-blueGray-200 rounded-b">
                                     <button
