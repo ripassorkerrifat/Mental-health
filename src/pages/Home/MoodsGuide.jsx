@@ -38,7 +38,7 @@ const MoodsGuide = () => {
                         <div className="p-4 md:p-5 ">
                             <div className="h-14  m-auto w-14">
                                 <img
-                                    className="group-hover:scale-125 duration-300"
+                                    className="group-hover:scale-125 h-full w-full rounded-full duration-300"
                                     src={dt.image}
                                     alt=""
                                 />

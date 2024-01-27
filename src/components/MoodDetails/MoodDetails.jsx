@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
-import Loading from "../../utils/Loading";
 import Container from "../../utils/Container";
 import MoodDetailModals from "../MoodDetailModal/MoodDetailModal";
 import Heading from "../../utils/Heading";
@@ -54,9 +53,9 @@ const MoodDetails = () => {
                                 }}
                                 whileInView={{opacity: [0, 1], y: [0, -20]}}
                                 transition={{duration: 0.7, delay: 0.4}}
-                                className="bg-blue-200 rounded-md p-6 text-center">
+                                className="bg-blue-200 rounded-md p-6 text-center flex justify-center items-center">
                                 <h2 className=" text-lg font-semibold">
-                                    {dt.heading}
+                                    <b>{i + 1}</b> {".  "} {dt.heading}
                                 </h2>
                             </motion.div>
                         ))}
