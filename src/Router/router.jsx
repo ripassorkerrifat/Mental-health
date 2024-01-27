@@ -7,6 +7,7 @@ import LoginPage from "../pages/Login/Login";
 import PrivetRouter from "./PrivetRouter";
 import BrethingExescisePage from "../pages/BrethingExescisePage/BrethingExescisePage";
 import DashboardLayout from "../layout/DashboardLayout";
+import MoodDetails from "../components/MoodDetails/MoodDetails";
 
 export const router = createBrowserRouter([
     {
@@ -38,6 +39,14 @@ export const router = createBrowserRouter([
                 element: (
                     <PrivetRouter>
                         <BrethingExescisePage />
+                    </PrivetRouter>
+                ),
+            },
+            {
+                path: "/feeling/:mood",
+                element: (
+                    <PrivetRouter>
+                        <MoodDetails />
                     </PrivetRouter>
                 ),
             },

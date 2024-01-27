@@ -58,13 +58,6 @@ const Navbar = () => {
                     </li>
                     <li>
                         <Link
-                            to="/services"
-                            className="inline-block hover:text-gray-900 duration-300 font-medium text-gray-800 text-lg">
-                            Journaling
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
                             to="/breathing-exercises"
                             className="inline-block hover:text-gray-900 duration-300 font-medium text-gray-800 text-lg">
                             Exersices

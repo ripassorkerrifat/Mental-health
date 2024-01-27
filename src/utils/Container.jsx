@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 const Container = ({children}) => {
     return (
-        <div className="md:py-16 py-14">
+        <div className="my-12 md:my-20">
             <div className="container">{children}</div>
         </div>
     );

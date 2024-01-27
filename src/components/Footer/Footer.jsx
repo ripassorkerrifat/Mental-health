@@ -11,7 +11,7 @@ const Footer = () => {
             className="relative  pt-8 pb-6 bg-pink-400 -mb-[20px]">
             <div className="container">
                 <div className="flex flex-wrap text-left md:text-left">
-                    <div className="w-full md:w-6/12 px-4">
+                    <div className="w-full md:w-6/12 ">
                         <h4 className="text-3xl text-dark">Mentel Health</h4>
                         <h5 className="text-lg mt-0 mb-2 text-gray-800">
                             Connect with us on these platforms, and expect a
@@ -43,7 +43,7 @@ const Footer = () => {
                             </button>
                         </div>
                     </div>
-                    <div className="w-full md:w-6/12 px-4">
+                    <div className="w-full md:w-6/12 ">
                         <div className="flex flex-wrap items-top mb-6">
                             <div className="w-full md:w-4/12 md:px-4 ml-auto">
                                 <p className="text-dark  font-semibold mb-2">

@@ -1,13 +1,15 @@
 import Banner from "./Banner";
 import BreathingExercise from "./BreathingExercise";
-import GuideMeditaion from "./GuideMeditaion";
+import MoodCollectror from "./ModdCollectror";
+import MoodsGuide from "./MoodsGuide";
 import Support from "./Support";
 
 const Home = () => {
     return (
         <div>
             <Banner />
-            <GuideMeditaion />
+            <MoodCollectror />
+            <MoodsGuide />
             <BreathingExercise />
             <Support />
         </div>

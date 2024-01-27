@@ -30,8 +30,6 @@ export const AuthProvider = ({children}) => {
         }
     }, [token]);
 
-    console.log(user);
-
     const authInfo = {user, setUser, loading, setLoading, token, setToken};
     return (
         <UserContext.Provider value={authInfo}>{children}</UserContext.Provider>

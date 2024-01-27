@@ -9,8 +9,8 @@ import {motion} from "framer-motion";
 
 const Support = () => {
     return (
-        <Container>
-            <div className=" grid md:grid-cols-2 md:-mt-20">
+        <>
+            <div className=" grid md:grid-cols-2 md:-mt-20 container">
                 <div className=" md:grid place-content-center">
                     <div className="flex flex-col md:mr-4 desc text-lg">
                         <div>
@@ -57,7 +57,7 @@ const Support = () => {
                     />
                 </motion.div>
             </div>
-        </Container>
+        </>
     );
 };
 
