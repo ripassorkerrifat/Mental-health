@@ -6,7 +6,7 @@ import {AuthProvider} from "./context/AuthProvider.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <AuthProvider>
-        <Toaster position="top-right" />
+        <Toaster position="bottom-right" />
         <App />
     </AuthProvider>
 );
