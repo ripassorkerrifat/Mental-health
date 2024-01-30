@@ -31,8 +31,8 @@ const BreathingExercise = () => {
     }
 
     return (
-        <div className="">
-            <Container>
+        <div className={`${pathname == "/" && " bg-blue-300 "} py-20`}>
+            <div className="container">
                 <div>
                     <Heading title={"Some Breathing Exercises"} />
                 </div>
@@ -128,7 +128,7 @@ const BreathingExercise = () => {
                         showModal={showModal}
                     />
                 )}
-            </Container>
+            </div>
         </div>
     );
 };

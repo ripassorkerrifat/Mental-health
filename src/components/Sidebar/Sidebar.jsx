@@ -24,11 +24,6 @@ const Sidebar = () => {
 
                         <div className="pt-3">
                             <Link
-                                to={"/"}
-                                className="text-center w-full  mt-3 inline-flex items-center font-semibold hover:bg-gray-200 px-3 py-2 rounded-lg">
-                                <FaHome size={20} className="mr-2" /> Home
-                            </Link>
-                            <Link
                                 to={"profile"}
                                 className="text-center w-full  mt-3 inline-flex items-center font-semibold hover:bg-gray-200 px-3 py-2 rounded-lg">
                                 <ImProfile size={20} className="mr-2" /> Profile
@@ -40,7 +35,7 @@ const Sidebar = () => {
                                 Journaling
                             </Link>
                             <Link
-                                to={"profile"}
+                                to={"add-journal"}
                                 className="text-center w-full  mt-3 inline-flex items-center font-semibold hover:bg-gray-200 px-3 py-2 rounded-lg">
                                 <IoAdd size={20} className="mr-2" />
                                 Add Journaling

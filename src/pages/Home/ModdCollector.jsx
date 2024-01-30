@@ -12,24 +12,10 @@ import {HiOutlineEmojiSad} from "react-icons/hi";
 import {useUserContext} from "../../context/AuthProvider";
 import {config} from "../../utils/envCongif";
 import toast from "react-hot-toast";
-
-// const findMood = (moods, query) => {
-//     moods?.filter(
-//         (md) => md?.mood?.toLowerCase() == query?.mood?.toLowerCase()
-//     );
-// };
-
-const findMood = (moods, query) => {
-    if (!moods || !query) {
-        return [];
-    }
-
-    const lowercaseQuery = query?.toLowerCase();
-
-    return moods.filter(
-        (md) => md && md.mood && md.mood.toLowerCase() === lowercaseQuery
-    );
-};
+import {remainingTimeUntilEnable} from "../../utils/remainingTimeUntilEnable";
+import {isDisableButton} from "../../utils/isDisableButton";
+import {findMood} from "../../utils/findMood";
+import Emotions from "../../components/Emotions/Emotions";
 
 const today = new Date();
 const monthNames = [
@@ -50,47 +36,6 @@ const year = today.getFullYear();
 const month = monthNames[today.getMonth()];
 const day = today.getDate();
 const formattedDate = `${month} ${day}, ${year}`;
-
-const isDisableButton = (submittedTime) => {
-    if (submittedTime) {
-        const currentTime = new Date();
-        const submittedDateTime = new Date(submittedTime);
-        const twentyFourHoursLater = new Date(
-            submittedDateTime.getTime() + 24 * 60 * 60 * 1000
-        );
-        return currentTime < twentyFourHoursLater;
-    }
-    return false;
-};
-
-const remainingTimeUntilEnable = (submittedTime) => {
-    if (submittedTime) {
-        const currentTime = new Date();
-        const submittedDateTime = new Date(submittedTime);
-        const twentyFourHoursLater = new Date(
-            submittedDateTime.getTime() + 24 * 60 * 60 * 1000
-        ); // Add 24 hours to the submitted time
-        const remainingTime = twentyFourHoursLater - currentTime;
-
-        // Calculate hours, minutes, and seconds from remaining milliseconds
-        const hours = Math.floor(remainingTime / (1000 * 60 * 60));
-        const minutes = Math.floor(
-            (remainingTime % (1000 * 60 * 60)) / (1000 * 60)
-        );
-        const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
-
-        return {
-            hours: hours,
-            minutes: minutes,
-            seconds: seconds,
-        };
-    }
-    return {
-        hours: 0,
-        minutes: 0,
-        seconds: 0,
-    }; // Return 0 if submitted time is not provided
-};
 
 const MoodCollector = () => {
     const {user} = useUserContext();
@@ -250,97 +195,14 @@ const MoodCollector = () => {
                             )}
                         </div>
                     </div>
-                    <div className="relative rounded-lg flex justify-center items-center bg-primary py-10 px-4">
-                        <div>
-                            <h2 className="text-2xl mb-3">Your Emotions</h2>
-                            <div className="flex  md:space-x-2">
-                                <div className="">
-                                    <div className="-space-y-1 flex items-center justify-center flex-col mr-2">
-                                        <img
-                                            src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/512px/1f61f.png"
-                                            alt=""
-                                            className="md:h-[62px] md:w-[62px] h-10 w-10 rounded-full"
-                                        />
-                                        <h3 className="">Anxious</h3>
-                                        <p>
-                                            <b>
-                                                {anxious?.length
-                                                    ? anxious?.length
-                                                    : 0}
-                                            </b>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="">
-                                    <div className="-space-y-1 flex items-center justify-center flex-col mr-2">
-                                        <img
-                                            src="https://i.pinimg.com/originals/0e/f3/54/0ef3543f7eb319f6203a13e85e69d0a6.png"
-                                            alt=""
-                                            className="md:h-[57px] md:w-[57px] h-9 w-9 rounded-full"
-                                        />
-                                        <h3 className="">Stressed</h3>
-                                        <p>
-                                            <b>
-                                                {stressed?.length
-                                                    ? stressed?.length
-                                                    : 0}
-                                            </b>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="">
-                                    <div className="-space-y-1 flex items-center justify-center flex-col mr-2">
-                                        <img
-                                            src="https://cdn.pixabay.com/photo/2017/03/05/21/55/emoticon-2120024_1280.png"
-                                            alt=""
-                                            className="md:h-[68px] md:w-[68px] h-11 w-11 rounded-full"
-                                        />
-                                        <h3 className="">Happy</h3>
-                                        <p>
-                                            <b>
-                                                {happy?.length
-                                                    ? happy?.length
-                                                    : 0}
-                                            </b>
-                                        </p>
-                                    </div>
-                                </div>
 
-                                <div className="">
-                                    <div className="-space-y-1 flex items-center justify-center flex-col mr-2">
-                                        <img
-                                            src="https://static-00.iconduck.com/assets.00/angry-face-emoji-2048x1974-nj42m72j.png"
-                                            alt=""
-                                            className="md:h-[55px] md:w-[55px] h-9 w-9 rounded-full"
-                                        />
-                                        <h3 className="">Angry</h3>
-                                        <p>
-                                            <b>
-                                                {angry?.length
-                                                    ? angry?.length
-                                                    : 0}
-                                            </b>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="">
-                                    <div className="-space-y-1 flex items-center justify-center flex-col mr-2">
-                                        <img
-                                            src="https://i.pinimg.com/564x/cd/18/02/cd1802ee8d12a4396ad4a1bd85a5ebbd.jpg"
-                                            alt=""
-                                            className="md:h-16 md:w-16 h-10 w-10 rounded-full"
-                                        />
-                                        <h3 className="">Sad</h3>
-                                        <p>
-                                            <b>
-                                                {sad?.length ? sad?.length : 0}
-                                            </b>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <Emotions
+                        stressed={stressed}
+                        anxious={anxious}
+                        happy={happy}
+                        angry={angry}
+                        sad={sad}
+                    />
                 </div>
             </Container>
         </div>

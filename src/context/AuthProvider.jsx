@@ -21,8 +21,14 @@ export const AuthProvider = ({children}) => {
             })
                 .then((res) => res.json())
                 .then((data) => {
-                    setUser(data.data);
-                    setLoading(false);
+                    if (data?.message == "jwt expired") {
+                        localStorage.removeItem("accessToken");
+                        setToken("");
+                        setUser(null);
+                    } else {
+                        setUser(data.data);
+                        setLoading(false);
+                    }
                 });
         } else {
             setUser(null);

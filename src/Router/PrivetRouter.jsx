@@ -9,7 +9,7 @@ const PrivetRouter = ({children}) => {
 
     const location = useLocation();
 
-    if (loading && !user) {
+    if (loading) {
         return <Loading />;
     }
     if (!user) {

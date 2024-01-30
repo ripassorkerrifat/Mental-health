@@ -65,6 +65,13 @@ const Navbar = () => {
                     </li>
                     <li>
                         <Link
+                            to="/journals"
+                            className="inline-block hover:text-gray-900 duration-300 font-medium text-gray-800 text-lg">
+                            Journals
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
                             to="/dashboard/profile"
                             className="inline-block hover:text-gray-900 duration-300 font-medium text-gray-800 text-lg">
                             Dashboard
