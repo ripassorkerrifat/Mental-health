@@ -11,6 +11,7 @@ import Profile from "../pages/Dashboard/Profile";
 import MyJournals from "../pages/Dashboard/MyJournals";
 import AddJournal from "../pages/Dashboard/AddJournal";
 import Journals from "../pages/Journals/Journals";
+import Chat from "../pages/Chat/Chat";
 
 export const router = createBrowserRouter([
     {
@@ -50,6 +51,14 @@ export const router = createBrowserRouter([
                 element: (
                     <PrivetRouter>
                         <Journals />
+                    </PrivetRouter>
+                ),
+            },
+            {
+                path: "/chat-with-bot",
+                element: (
+                    <PrivetRouter>
+                        <Chat />
                     </PrivetRouter>
                 ),
             },

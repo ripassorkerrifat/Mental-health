@@ -31,7 +31,7 @@ const BreathingExercise = () => {
     }
 
     return (
-        <div className={`${pathname == "/" && " bg-blue-300 "} py-20`}>
+        <div className={`${pathname == "/" && " bg-primary"} py-20`}>
             <div className="container">
                 <div>
                     <Heading title={"Some Breathing Exercises"} />
@@ -45,12 +45,12 @@ const BreathingExercise = () => {
                                     whileInView={{opacity: [0, 1], x: [-20, 0]}}
                                     transition={{duration: 0.7, delay: d.deley}}
                                     key={i}
-                                    className="flex flex-col items-center justify-center text-center bg-primary border shadow-sm rounded-lg md:p-0 p-4">
+                                    className="flex flex-col items-center justify-center text-center bg-secondary border border-gray-700 shadow-sm rounded-lg md:p-0 p-4">
                                     <div className="p-4 md:p-5">
-                                        <h3 className="text-lg font-bold text-dark">
+                                        <h3 className="text-lg font-bold text-gray-100">
                                             {d?.title}
                                         </h3>
-                                        <p className="text-gray-700 text-base">
+                                        <p className="text-gray-200 text-base">
                                             {d?.desc?.length > 100
                                                 ? `${d?.desc?.slice(0, 100)}...`
                                                 : desc}
@@ -64,7 +64,10 @@ const BreathingExercise = () => {
                                                 type="submit"
                                                 className="inline-flex items-center gap-x-1">
                                                 <span> Read more</span>
-                                                <IoIosArrowForward size={16} />
+                                                <IoIosArrowForward
+                                                    size={16}
+                                                    className="text-gray-200"
+                                                />
                                             </button>
                                         </div>
                                     </div>
@@ -78,12 +81,12 @@ const BreathingExercise = () => {
                                     key={i}
                                     whileInView={{opacity: [0, 1], x: [-20, 0]}}
                                     transition={{duration: 0.7, delay: d.deley}}
-                                    className="flex flex-col items-center justify-center text-center bg-primary border shadow-sm rounded-lg md:p-0 p-4">
+                                    className="flex flex-col items-center justify-center text-center bg-secondary border border-gray-700 shadow-sm rounded-lg md:p-0 p-4">
                                     <div className="p-4 md:p-5">
-                                        <h3 className="text-lg font-bold text-dark">
+                                        <h3 className="text-lg font-bold text-gray-100">
                                             {d?.title}
                                         </h3>
-                                        <p className="text-gray-700 text-base">
+                                        <p className="text-gray-200 text-base">
                                             {d?.desc?.length > 100
                                                 ? `${d?.desc?.slice(0, 100)}...`
                                                 : desc}
@@ -97,7 +100,10 @@ const BreathingExercise = () => {
                                                 type="submit"
                                                 className="inline-flex items-center gap-x-1">
                                                 <span> Read more</span>
-                                                <IoIosArrowForward size={16} />
+                                                <IoIosArrowForward
+                                                    size={16}
+                                                    className="text-gray-200"
+                                                />
                                             </button>
                                         </div>
                                     </div>

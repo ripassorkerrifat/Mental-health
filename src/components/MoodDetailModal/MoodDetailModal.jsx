@@ -13,23 +13,23 @@ export default function MoodDetailModals({
                     <div className="fixed inset-[20px] bottom-0 md:top-[88px] top-[80px] overflow-x-hidden overflow-y-auto z-[9999999] outline-none focus:outline-none ">
                         <div className="relative w-auto my-6 mx-auto max-w-4xl">
                             {/*content*/}
-                            <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                            <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-primary outline-none focus:outline-none">
                                 {/*header*/}
                                 <div className="flex items-start justify-between md:px-10 p-5 border-b border-solid border-blueGray-200 rounded-t">
-                                    <h3 className="text-2xl font-semibold text-dark">
+                                    <h3 className="text-2xl font-semibold text-gray-200">
                                         <span> {currentGuide.heading}</span>
                                     </h3>
                                     <button
                                         className="p-1 ml-auto  float-right text-2xl  leading-none font-semibold outline-none focus:outline-none"
                                         onClick={() => setShowModal(false)}>
-                                        <ImCancelCircle className="text-dark" />
+                                        <ImCancelCircle className="text-gray-200" />
                                     </button>
                                 </div>
                                 {/*body*/}
                                 <motion.div
                                     whileInView={{opacity: [0, 1], y: [20, 0]}}
                                     transition={{duration: 0.9}}
-                                    className="relative md:px-10 p-5 flex-auto text-gray-800">
+                                    className="relative md:px-10 p-5 flex-auto text-gray-200">
                                     <div>
                                         {currentGuide?.tips?.map((s, i) => (
                                             <li
@@ -52,7 +52,7 @@ export default function MoodDetailModals({
                             </div>
                         </div>
                     </div>
-                    <div className="opacity-50 fixed inset-0 z-40 bg-black"></div>
+                    <div className="opacity-60 fixed inset-0 z-40 bg-black"></div>
                 </div>
             )}
         </>

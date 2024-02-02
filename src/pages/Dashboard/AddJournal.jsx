@@ -60,7 +60,7 @@ const AddJournal = () => {
         <div className="container">
             <form
                 onSubmit={handleSubmit}
-                className=" md:p-10 text-dark shadow-lg mt-7">
+                className=" md:p-10 bg-primary rounded-md text-gray-200 shadow-lg mt-7">
                 <div>
                     <div>
                         <div className="flex justify-between items-center">
@@ -74,7 +74,7 @@ const AddJournal = () => {
                             <select
                                 id="heading"
                                 name="heading"
-                                className="py-2 px-4 block border bg-white dark:focus:border-gray-500 dark:border-gray-600 border-gray-700 w-full rounded-md focus:outline-none"
+                                className="py-2 px-4 block border bg-secondary dark:focus:border-gray-500 dark:border-gray-600 border-gray-700 w-full rounded-md focus:outline-none"
                                 value={heading}
                                 onChange={(event) =>
                                     setHeading(event.target.value)
@@ -88,7 +88,7 @@ const AddJournal = () => {
                                     </option>
                                 ))}
                             </select>
-                            <>
+                            <div className="pt-4">
                                 {heading == "Gratitude Journaling" && (
                                     <li className="mt-2 ">
                                         Write down three things you are grateful
@@ -209,7 +209,7 @@ const AddJournal = () => {
                                         positive mindset.
                                     </li>
                                 )}
-                            </>
+                            </div>
                         </div>
                     </div>
                     <div>
@@ -226,7 +226,7 @@ const AddJournal = () => {
                                 id="desc"
                                 name="desc"
                                 rows={5}
-                                className="py-2 px-4 block border bg-white dark:focus:border-gray-500 dark:border-gray-600 border-gray-700 w-full rounded-md focus:outline-none "
+                                className="py-2 px-4 block border bg-secondary  border-gray-700 w-full rounded-md focus:outline-none "
                                 placeholder="Descriptions..."
                             />
                         </div>

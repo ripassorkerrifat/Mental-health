@@ -19,13 +19,13 @@ const MyJournals = () => {
     }, []);
 
     return (
-        <div className="grid lg:grid-cols-3  md:grid-cols-2  grid-cols-1 gap-10">
+        <div className="grid lg:grid-cols-3  md:grid-cols-2  grid-cols-1 gap-10 text-gray-200">
             {journals?.map((jn, i) => (
                 <motion.div
                     whileInView={{opacity: [0, 1], y: [0, -20]}}
                     transition={{duration: 0.7, delay: 0.4}}
                     key={i}
-                    className="flex flex-col  bg-primary border shadow-sm rounded-lg md:p-0 p-5">
+                    className="flex flex-col  bg-primary border border-gray-700 shadow-sm rounded-lg md:p-0 p-5">
                     <div className="p-4 md:p-5">
                         <p className="text-xs text-right">
                             <TimeAgo datetime={formattedDate(jn?.createdAt)} />
@@ -40,14 +40,14 @@ const MyJournals = () => {
                                   ?.split("\n")
                                   .map((line, index) => (
                                       <p
-                                          className="text-gray-700 text-base capitalize"
+                                          className="text-gray-200 text-base capitalize"
                                           key={index}>
                                           {line}
                                       </p>
                                   ))
                             : jn?.desc?.split("\n").map((line, index) => (
                                   <p
-                                      className="text-gray-700 text-base capitalize"
+                                      className="text-gray-200 text-base capitalize"
                                       key={index}>
                                       {line}
                                   </p>

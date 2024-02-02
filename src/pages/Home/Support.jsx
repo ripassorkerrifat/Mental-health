@@ -9,8 +9,8 @@ import {motion} from "framer-motion";
 
 const Support = () => {
     return (
-        <>
-            <div className=" grid md:grid-cols-2 md:-mt-20 container">
+        <div className="py-10">
+            <div className=" grid md:grid-cols-2   container">
                 <div className=" md:grid place-content-center">
                     <div className="flex flex-col md:mr-4 desc text-lg">
                         <div>
@@ -20,7 +20,7 @@ const Support = () => {
                         <motion.div
                             whileInView={{opacity: [0, 1], x: [-20, 0]}}
                             transition={{duration: 0.7, delay: 0.5}}>
-                            <p className="mb-3 ">
+                            <p className="mb-3 text-gray-200">
                                 "Find solace and strength in our Mental Health
                                 Community. Here, support is a heartbeat away.
                                 Share, listen, and thrive together on the
@@ -49,15 +49,15 @@ const Support = () => {
                 <motion.div
                     whileInView={{opacity: [0, 1], y: [0, -20]}}
                     transition={{duration: 0.7, delay: 0.5}}
-                    className="flex -z-40 items-center  justify-center md:p-6 md:mt-8 md:mr-8 ">
+                    className="flex -z-40 items-center rounded-xl justify-center md:p-6 md:mt-8 md:mr-8 ">
                     <Lottie
-                        className="object-contain rounded-lg  md:w-[540px]  w-full"
+                        className="object-contain rounded-xl  md:w-[440px]  w-full"
                         animationData={support}
                         loop={true}
                     />
                 </motion.div>
             </div>
-        </>
+        </div>
     );
 };
 

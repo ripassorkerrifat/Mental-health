@@ -7,7 +7,7 @@ import {config} from "../../utils/envCongif";
 import toast from "react-hot-toast";
 
 const Navbar = () => {
-    const {user, setUser, token, setToken} = useUserContext();
+    const {setUser, token, setToken} = useUserContext();
     const [open, setOpen] = useState(false);
 
     const handleLogout = () => {
@@ -32,7 +32,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="bg-pink-400 sticky -top-0 right-0 z-[99999999]  md:py-3 py-2">
+        <nav className="bg-primary sticky -top-0 right-0 z-[99999999]  md:py-3 py-2">
             <div className="flex items-center font-medium justify-between container">
                 <div className="md:w-auto w-full flex justify-between items-center">
                     <Link to="/" className="inline-flex items-center">
@@ -52,28 +52,35 @@ const Navbar = () => {
                     <li>
                         <Link
                             to="/"
-                            className="inline-block hover:text-gray-900 duration-300 font-medium text-gray-800 text-lg">
+                            className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-lg">
                             Home
                         </Link>
                     </li>
                     <li>
                         <Link
                             to="/breathing-exercises"
-                            className="inline-block hover:text-gray-900 duration-300 font-medium text-gray-800 text-lg">
+                            className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-lg">
                             Exersices
                         </Link>
                     </li>
                     <li>
                         <Link
+                            to="/chat-with-bot"
+                            className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-lg">
+                            Chat with bot
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
                             to="/journals"
-                            className="inline-block hover:text-gray-900 duration-300 font-medium text-gray-800 text-lg">
+                            className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-lg">
                             Journals
                         </Link>
                     </li>
                     <li>
                         <Link
                             to="/dashboard/profile"
-                            className="inline-block hover:text-gray-900 duration-300 font-medium text-gray-800 text-lg">
+                            className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-lg">
                             Dashboard
                         </Link>
                     </li>
@@ -94,7 +101,7 @@ const Navbar = () => {
                     <li className="mt-14">
                         <Link
                             to="/"
-                            className="inline-block hover:text-gray-900 duration-300 font-medium text-gray-800 text-lg px-3">
+                            className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-lg px-3">
                             Home
                         </Link>
                     </li>
@@ -102,21 +109,21 @@ const Navbar = () => {
                     <li>
                         <Link
                             to="/services"
-                            className="inline-block hover:text-gray-900 duration-300 font-medium text-gray-800 text-lg px-3">
+                            className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-lg px-3">
                             Services
                         </Link>
                     </li>
                     <li>
                         <Link
                             to="/portfolio"
-                            className="inline-block hover:text-gray-900 duration-300 font-medium text-gray-800 text-lg px-3">
+                            className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-lg px-3">
                             Portfolio
                         </Link>
                     </li>
                     <li>
                         <Link
                             to="/pricing"
-                            className="inline-block hover:text-gray-900 duration-300 font-medium text-gray-800 text-lg px-3">
+                            className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-lg px-3">
                             Pricing
                         </Link>
                     </li>

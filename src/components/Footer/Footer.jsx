@@ -8,12 +8,12 @@ const Footer = () => {
         <motion.footer
             whileInView={{opacity: [0, 1], y: [0, -1]}}
             transition={{duration: 1.1, delay: 0.1}}
-            className="relative  pt-8 pb-6 bg-pink-400 -mb-[20px]">
+            className="relative  pt-8 pb-6 bg-primary -mb-[20px]">
             <div className="container">
                 <div className="flex flex-wrap text-left md:text-left">
                     <div className="w-full md:w-6/12 ">
                         <h4 className="text-3xl text-dark">Mentel Health</h4>
-                        <h5 className="text-lg mt-0 mb-2 text-gray-800">
+                        <h5 className="text-lg mt-0 mb-2 text-gray-200">
                             Connect with us on these platforms, and expect a
                             response within 1-2 days.
                         </h5>
@@ -49,32 +49,32 @@ const Footer = () => {
                                 <p className="text-dark  font-semibold mb-2">
                                     Useful Links
                                 </p>
-                                <ul className="list-unstyled text-gray-800">
+                                <ul className="list-unstyled text-gray-200">
                                     <li>
                                         <Link
                                             to={"/"}
-                                            className=" hover:text-gray-950 duration-300 f pb-2 ">
+                                            className=" hover:text-gray-400 duration-300 f pb-2 ">
                                             About us
                                         </Link>
                                     </li>
                                     <li>
                                         <Link
                                             to={"/"}
-                                            className=" hover:text-gray-950 duration-300 f pb-2 ">
+                                            className=" hover:text-gray-400 duration-300 f pb-2 ">
                                             Breathing exercise
                                         </Link>
                                     </li>
                                     <li>
                                         <Link
                                             to={"/"}
-                                            className=" hover:text-gray-950 duration-300 f pb-2 ">
+                                            className=" hover:text-gray-400 duration-300 f pb-2 ">
                                             Journaling
                                         </Link>
                                     </li>
                                     <li>
                                         <Link
                                             to={"/"}
-                                            className=" hover:text-gray-950 duration-300 f pb-2 ">
+                                            className=" hover:text-gray-400 duration-300 f pb-2 ">
                                             Contact us
                                         </Link>
                                     </li>
@@ -84,25 +84,25 @@ const Footer = () => {
                                 <p className="text-dark  font-semibold mb-2">
                                     Other Resources
                                 </p>
-                                <ul className="list-unstyled text-gray-800">
+                                <ul className="list-unstyled text-gray-200">
                                     <li>
                                         <Link
                                             to={"/"}
-                                            className=" hover:text-gray-950 duration-300 f pb-2 ">
+                                            className=" hover:text-gray-400 duration-300 f pb-2 ">
                                             Privacy Policy
                                         </Link>
                                     </li>
                                     <li>
                                         <Link
                                             to={"/"}
-                                            className=" hover:text-gray-950 duration-300 f pb-2 ">
+                                            className=" hover:text-gray-400 duration-300 f pb-2 ">
                                             Terms &amp; Conditions
                                         </Link>
                                     </li>
                                     <li>
                                         <Link
                                             to={"/"}
-                                            className=" hover:text-gray-950 duration-300 f pb-2 ">
+                                            className=" hover:text-gray-400 duration-300 f pb-2 ">
                                             Journaling
                                         </Link>
                                     </li>
@@ -114,7 +114,7 @@ const Footer = () => {
                 <div className="border-t mb-3 border-gray-700 md:mx-4"></div>
                 <div className="flex flex-wrap items-center md:justify-between justify-center">
                     <div className="w-full md:w-4/12 mx-auto text-center">
-                        <div className="text-sm  font-medium">
+                        <div className="text-sm  font-medium text-gray-300">
                             Copyright © 2024 by Mentel Health and Wellbeing.
                         </div>
                     </div>

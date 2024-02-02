@@ -2,10 +2,11 @@
 import animation from "../../assets/Animation.json";
 import Lottie from "lottie-react";
 import {motion} from "framer-motion";
+import {Link} from "react-router-dom";
 
 const Banner = () => {
     return (
-        <div className=" md:-mt-10 ">
+        <div className="">
             <div className="container grid md:grid-cols-2 md:gap-x-10 sm:py-12 ">
                 <motion.div
                     whileInView={{opacity: [0, 1], y: [0, -20]}}
@@ -22,7 +23,7 @@ const Banner = () => {
                     transition={{duration: 0.7, delay: 0.3}}
                     className=" md:mt-16 mt-14 md:grid place-content-center">
                     <div className="flex flex-col md:mr-4">
-                        <h2 className="font-bold leading-none md:text-5xl text-3xl">
+                        <h2 className="font-bold text-gray-200  leading-none md:text-5xl text-3xl">
                             Embrace <span>Wellness</span>, <br />{" "}
                             <span>Nurture</span> Your Mind
                         </h2>
@@ -35,6 +36,13 @@ const Banner = () => {
                             potential within you, foster a positive mindset, and
                             find solace in a community that understands.
                         </p>
+                        <div>
+                            <Link to={"/chat-with-bot"}>
+                                <button className="btn-primary text-lg">
+                                    Chat with bot
+                                </button>
+                            </Link>
+                        </div>
                     </div>
                 </motion.div>
             </div>

@@ -16,6 +16,7 @@ import {remainingTimeUntilEnable} from "../../utils/remainingTimeUntilEnable";
 import {isDisableButton} from "../../utils/isDisableButton";
 import {findMood} from "../../utils/findMood";
 import Emotions from "../../components/Emotions/Emotions";
+import {motion} from "framer-motion";
 
 const today = new Date();
 const monthNames = [
@@ -115,10 +116,13 @@ const MoodCollector = () => {
     };
 
     return (
-        <div className="bg-blue-300 text-dark">
-            <Container>
+        <div className="bg-primary text-gray-200">
+            <div className="container">
                 <div className="grid md:grid-cols-2 gap-10 py-16 text-center">
-                    <div className="relative rounded-lg flex justify-center items-center bg-primary py-10 px-4">
+                    <motion.div
+                        whileInView={{opacity: [0, 1], y: [0, -20]}}
+                        transition={{duration: 0.5, delay: 0.4}}
+                        className="relative rounded-lg flex justify-center items-center bg-secondary py-10 px-4 mt-10">
                         <div>
                             <div className="flex  items-center absolute top-4 left-4 text-sm">
                                 <BsCalendar3 size={16} className="mr-2" />{" "}
@@ -140,11 +144,11 @@ const MoodCollector = () => {
                                 />
                                 <BsEmojiNeutral
                                     size={30}
-                                    className="-mr-1 bg-blue-300 rounded-full"
+                                    className="-mr-1 bg-blue-300 text-gray-700 rounded-full"
                                 />
                                 <BsEmojiSunglasses
                                     size={30}
-                                    className="-mr-2 bg-yellow-400 rounded-full "
+                                    className="-mr-2 bg-yellow-400 text-gray-700 rounded-full "
                                 />
                             </div>
                             <div className="flex mt-4">
@@ -156,7 +160,7 @@ const MoodCollector = () => {
                                         }
                                         value={mood}
                                         name="level"
-                                        className="py-2 px-4 block border bg-gray-50 border-gray-400 w-full rounded-md  focus:outline-none">
+                                        className="py-2 px-4 block border bg-primary border-gray-400 w-full rounded-md  focus:outline-none">
                                         <option value="" selected disabled>
                                             How's your vibe today?
                                         </option>
@@ -177,8 +181,8 @@ const MoodCollector = () => {
                                     onClick={handleSubmit}
                                     className={`btn-primary  ml-3 py-1 ${
                                         isDisableButton(lastOne?.createdAt)
-                                            ? "bg-gray-400"
-                                            : "bg-blue-400"
+                                            ? "bg-gray-400 text-slate-800"
+                                            : ""
                                     }`}>
                                     Submit
                                 </button>
@@ -194,7 +198,7 @@ const MoodCollector = () => {
                                 </p>
                             )}
                         </div>
-                    </div>
+                    </motion.div>
 
                     <Emotions
                         stressed={stressed}
@@ -204,7 +208,7 @@ const MoodCollector = () => {
                         sad={sad}
                     />
                 </div>
-            </Container>
+            </div>
         </div>
     );
 };

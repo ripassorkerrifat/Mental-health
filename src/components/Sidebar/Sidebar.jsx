@@ -7,7 +7,7 @@ import {Link, Outlet} from "react-router-dom";
 const Sidebar = () => {
     return (
         <div className="flex space-x-4 my-9">
-            <div className=" p-4 w-72 bg-gray-50  text-dark shadow-gray-300 shadow-2xl">
+            <div className=" p-4 w-72 bg-primary  text-dark  shadow-xl">
                 <div className="flex flex-col">
                     <div className="space-y-4">
                         <div className="flex flex-col justify-center items-center mt-8">
@@ -25,18 +25,18 @@ const Sidebar = () => {
                         <div className="pt-3">
                             <Link
                                 to={"profile"}
-                                className="text-center w-full  mt-3 inline-flex items-center font-semibold hover:bg-gray-200 px-3 py-2 rounded-lg">
+                                className="text-center w-full  mt-3 inline-flex items-center font-semibold hover:bg-gray-500  px-3 py-2 rounded-lg">
                                 <ImProfile size={20} className="mr-2" /> Profile
                             </Link>
                             <Link
                                 to={"journaling"}
-                                className="text-center w-full  mt-3 inline-flex items-center font-semibold hover:bg-gray-200 px-3 py-2 rounded-lg">
+                                className="text-center w-full  mt-3 inline-flex items-center font-semibold hover:bg-gray-500  px-3 py-2 rounded-lg">
                                 <IoJournal size={20} className="mr-2" />
                                 Journaling
                             </Link>
                             <Link
                                 to={"add-journal"}
-                                className="text-center w-full  mt-3 inline-flex items-center font-semibold hover:bg-gray-200 px-3 py-2 rounded-lg">
+                                className="text-center w-full  mt-3 inline-flex items-center font-semibold hover:bg-gray-500  px-3 py-2 rounded-lg">
                                 <IoAdd size={20} className="mr-2" />
                                 Add Journaling
                             </Link>

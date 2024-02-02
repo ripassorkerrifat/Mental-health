@@ -8,7 +8,7 @@
     box-sizing: border-box;
 }
 body {
-    background: white;
+    background: #001422;
     font-weight: 500;
 }
 
@@ -29,7 +29,7 @@ span {
         @apply text-dark text-base;
     }
     .btn-primary {
-        @apply bg-primary duration-500 px-6  py-2 rounded-[6px] text-dark text-base font-medium;
+        @apply bg-pink-500 duration-500 px-6  py-2 rounded-[6px] text-dark text-base font-medium;
     }
     .sub-head {
         @apply text-2xl text-dark;

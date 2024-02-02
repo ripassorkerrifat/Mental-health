@@ -34,7 +34,7 @@ const MoodsGuide = () => {
                         key={i}
                         whileInView={{opacity: [0, 1], x: [-20, 0]}}
                         transition={{duration: 0.5, delay: dt.delay}}
-                        className="flex flex-col justify-center items-center text-center bg-primary border shadow-sm rounded-lg group">
+                        className="flex flex-col justify-center items-center text-center bg-primary border border-gray-700 shadow-sm rounded-lg group">
                         <div className="p-4 md:p-5 ">
                             <div className="h-14  m-auto w-14">
                                 <img
@@ -43,15 +43,13 @@ const MoodsGuide = () => {
                                     alt=""
                                 />
                             </div>
-                            <p className="text-gray-700 text-base mt-2">
+                            <p className="text-gray-200 text-base mt-2">
                                 If you're feeling{" "}
-                                <span className="font-semibold">
-                                    {dt.mood}?
-                                </span>
+                                <b className="font-semibold">{dt.mood}?</b>
                             </p>
                             <Link
                                 to={`/feeling/${dt.mood.toLowerCase()}`}
-                                className="mt-2 inline-flex items-center gap-x-1 text-base font-semibold rounded-lg ">
+                                className="mt-2 inline-flex items-center text-gray-200 gap-x-1 text-base font-semibold rounded-lg ">
                                 <span> Read more</span>
                                 <svg
                                     className="flex-shrink-0 w-4 h-4"

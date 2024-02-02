@@ -4,6 +4,8 @@ import {useUserContext} from "../../context/AuthProvider";
 import {useEffect, useState} from "react";
 import {findMood} from "../../utils/findMood";
 import {config} from "../../utils/envCongif";
+import {motion} from "framer-motion";
+import {Link} from "react-router-dom";
 const Profile = () => {
     const {user} = useUserContext();
     const [allMoods, setAllMoods] = useState([]);
@@ -12,6 +14,16 @@ const Profile = () => {
     const [happy, setHappy] = useState([]);
     const [angry, setAngry] = useState([]);
     const [sad, setSad] = useState([]);
+
+    const [journals, setJournals] = useState([]);
+
+    useEffect(() => {
+        fetch(`${config.base_url}/journal/user/${user._id}`)
+            .then((res) => res.json())
+            .then((data) => {
+                setJournals(data.data);
+            });
+    }, []);
 
     useEffect(() => {
         if (user) {
@@ -32,7 +44,10 @@ const Profile = () => {
     return (
         <div className="mb-10">
             <div className="grid md:grid-cols-2 gap-10">
-                <div className="md:col-span-2 ">
+                <motion.div
+                    whileInView={{opacity: [0, 1], y: [0, -20]}}
+                    transition={{duration: 0.5, delay: 0.4}}
+                    className="">
                     <div className="flex justify-center items-center">
                         <Chart
                             options={{
@@ -100,7 +115,7 @@ const Profile = () => {
                             height={380}
                         />
                     </div>
-                </div>
+                </motion.div>
 
                 <div className="">
                     <Emotions
@@ -111,14 +126,23 @@ const Profile = () => {
                         sad={sad}
                     />
                 </div>
-                <div className="rounded-lg flex justify-center items-center bg-primary py-10 px-4 relative">
-                    <div>
-                        <p className="text-center font-semibold text-2xl">17</p>
-                        <h2 className="text-2xl mb-2">Your Journals</h2>
-                        <button className="btn-primary bg-blue-400">
-                            Add journal
-                        </button>
-                    </div>
+                <div>
+                    <motion.div
+                        whileInView={{opacity: [0, 1], y: [0, -20]}}
+                        transition={{duration: 0.5, delay: 0.4}}
+                        className="rounded-lg text-gray-200 flex justify-center items-center bg-primary py-10 px-4 relative mt-6">
+                        <div>
+                            <p className="text-center font-semibold text-2xl">
+                                {journals?.length ? journals.length : 0}
+                            </p>
+                            <h2 className="text-2xl mb-2 ">Your Journals</h2>
+                            <Link
+                                to={"/dashboard/add-journal"}
+                                className="btn-primary ">
+                                Add journal
+                            </Link>
+                        </div>
+                    </motion.div>
                 </div>
             </div>
         </div>

@@ -1,6 +1,15 @@
+import {motion} from "framer-motion";
+import {useLocation} from "react-router-dom";
 const Emotions = ({anxious, stressed, happy, angry, sad}) => {
+    const path = useLocation().pathname;
+    console.log(path);
     return (
-        <div className="relative rounded-lg flex justify-center items-center bg-primary py-10 px-4">
+        <motion.div
+            whileInView={{opacity: [0, 1], y: [0, -20]}}
+            transition={{duration: 0.5, delay: 0.4}}
+            className={`relative rounded-lg text-gray-200 flex justify-center items-center mt-10  py-10 px-4 ${
+                path == "/" ? "bg-secondary" : "bg-primary"
+            }`}>
             <div>
                 <h2 className="text-2xl mb-3">Your Emotions</h2>
                 <div className="flex  md:space-x-2">
@@ -72,7 +81,7 @@ const Emotions = ({anxious, stressed, happy, angry, sad}) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 
