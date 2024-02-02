@@ -3,9 +3,10 @@ import {useEffect, useRef, useState} from "react";
 import ChatLoad from "../../utils/ChatLoad";
 import {IoSend} from "react-icons/io5";
 import {useUserContext} from "../../context/AuthProvider";
+import {config} from "../../utils/envCongif";
 
 const openai = new OpenAI({
-    apiKey: "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",
+    apiKey: config.open_ai_key,
     dangerouslyAllowBrowser: true,
 });
 
