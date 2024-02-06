@@ -29,7 +29,7 @@ const AddJournal = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const data = {
-            userId: user?._id,
+            user: user?._id,
             title: heading,
             desc: e.target.desc.value,
         };

@@ -32,7 +32,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="bg-primary sticky -top-0 right-0 z-[99999999]  md:py-3 py-2">
+        <nav className="bg-primary sticky -top-0 right-0 z-[99999999]  md:py-4 py-2">
             <div className="flex items-center font-medium justify-between container">
                 <div className="md:w-auto w-full flex justify-between items-center">
                     <Link to="/" className="inline-flex items-center">
@@ -48,7 +48,7 @@ const Navbar = () => {
                         {open ? <MdOutlineCancel /> : <HiBars3 />}
                     </div>
                 </div>
-                <ul className="md:flex hidden  items-center gap-7 font-[Poppins]">
+                <ul className="md:flex hidden  space-x-2 items-center gap-7 font-[Poppins]">
                     <li>
                         <Link
                             to="/"

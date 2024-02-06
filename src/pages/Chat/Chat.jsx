@@ -1,11 +1,11 @@
 import OpenAI from "openai";
 import {useEffect, useRef, useState} from "react";
 import ChatLoad from "../../utils/ChatLoad";
-import {IoSend} from "react-icons/io5";
+import {IoSend, IoTrash} from "react-icons/io5";
 import {useUserContext} from "../../context/AuthProvider";
 import {config} from "../../utils/envCongif";
 import {toast} from "react-hot-toast";
-import {AiOutlineClear} from "react-icons/ai";
+import ClearChat from "../../components/ClearChat/ClearChat";
 
 const openai = new OpenAI({
     apiKey: config.open_ai_key,
@@ -16,6 +16,7 @@ const Chat = () => {
     const {user} = useUserContext();
     const [messages, setMessages] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
         if (user) {
@@ -48,10 +49,8 @@ const Chat = () => {
         const response = await openai.chat.completions.create({
             model: "gpt-3.5-turbo",
             messages: [userPrompt], // Pass the user's prompt to the API
-            max_tokens: 20,
+            // max_tokens: 20,
         });
-
-        setLoading(false);
 
         const postData = {
             data: [
@@ -82,44 +81,31 @@ const Chat = () => {
                     ]);
                 } else {
                     console.log(data);
+                    setLoading(false);
                     return toast.error("Something went wrong");
                 }
             });
-    };
 
-    const handleClear = () => {
-        const aggre = window.confirm(
-            "Are you sure you want to clear conversion"
-        );
-        if (aggre) {
-            fetch(`${config.base_url}/user/chat-with-ai/${user._id}`, {
-                method: "DELETE",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-            })
-                .then((res) => res.json())
-                .then((data) => {
-                    if (data.success) {
-                        setMessages([]);
-                    } else {
-                        console.log(data);
-                        return toast.error("Something went wrong");
-                    }
-                });
-        }
+        setLoading(false);
     };
 
     return (
         <div className="my-10 text-base">
+            {showModal && (
+                <ClearChat
+                    showModal={showModal}
+                    setShowModal={setShowModal}
+                    setMessages={setMessages}
+                />
+            )}
             <div className="max-w-6xl mx-auto  shadow-lg border border-gray-800 rounded-md p-4">
-                {messages?.length ? (
+                {messages?.length >= 2 ? (
                     <>
                         <button
-                            onClick={handleClear}
+                            onClick={() => setShowModal(true)}
                             className="inline-flex text-gray-200  items-center text-lg mb-2 ">
                             <span>Clear chat </span>{" "}
-                            <AiOutlineClear className="ml-2" />
+                            <IoTrash className="ml-2 text-pink-500" size={20} />
                         </button>
                     </>
                 ) : (
@@ -138,13 +124,13 @@ const Chat = () => {
                                         </div>
                                         {user?.avatar ? (
                                             <img
-                                                className="w-8 h-8 ml-2 rounded-full"
+                                                className="w-8 h-8 ml-2 rounded-full object-cover"
                                                 src={user.avatar}
                                                 alt="Sender"
                                             />
                                         ) : (
                                             <img
-                                                className="w-8 h-8 ml-2 rounded-full"
+                                                className="w-8 h-8 ml-2 rounded-full object-cover"
                                                 src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png"
                                                 alt="Sender"
                                             />
@@ -155,7 +141,7 @@ const Chat = () => {
                                 {message?.role == "assistant" && (
                                     <div className="flex justify-start items-center mb-5">
                                         <img
-                                            className="w-8 h-8 mr-2 rounded-full"
+                                            className="w-8 h-8 mr-2 object-cover rounded-full"
                                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPd1EkuNsW2EEHMjTRr9Dhw-FkGjOmFUgVtw&usqp=CAU"
                                             alt="Sender"
                                         />

@@ -72,9 +72,9 @@ const LoginPage = () => {
                     <div className=" flex flex-col justify-center py-14">
                         <div className="relative py-3 sm:max-w-xl sm:mx-auto mx-2">
                             <div
-                                className="absolute inset-0 bg-gradient-to-r from-primary to-secondary shadow-lg 
+                                className="absolute inset-0 bg-gradient-to-r from-blue-400 to-pink-300 shadow-lg 
                         transform  -rotate-6 rounded-3xl"></div>
-                            <div className="relative px-4 py-7 bg-white shadow-lg rounded-3xl sm:p-10">
+                            <div className="relative px-4 py-7 bg-gray-50 shadow-lg rounded-3xl sm:p-10">
                                 <div className="max-w-md mx-auto">
                                     <div>
                                         <h2 className="text-2xl text-gray-700 font-semibold">

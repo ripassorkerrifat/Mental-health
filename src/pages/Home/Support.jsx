@@ -32,14 +32,14 @@ const Support = () => {
                                     <p className="inline-flex items-center">
                                         <IoCall size={20} />
                                         <span className="ml-2">
-                                            +880 1744876681
+                                            +880 17448******
                                         </span>
                                     </p>
                                 </div>
                                 <p className="inline-flex items-center">
                                     <MdEmail size={20} />
                                     <span className="ml-2">
-                                        ripassorkerrifat@gmail.com
+                                        example@gmail.com
                                     </span>
                                 </p>
                             </div>

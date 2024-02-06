@@ -111,8 +111,8 @@ const Profile = () => {
                                 sad?.length ? sad.length + 1 : 1,
                             ]}
                             type="pie"
-                            width={500}
-                            height={380}
+                            width={400}
+                            height={350}
                         />
                     </div>
                 </motion.div>
@@ -130,15 +130,17 @@ const Profile = () => {
                     <motion.div
                         whileInView={{opacity: [0, 1], y: [0, -20]}}
                         transition={{duration: 0.5, delay: 0.4}}
-                        className="rounded-lg text-gray-200 flex justify-center items-center bg-primary py-10 px-4 relative mt-6">
+                        className="rounded-lg text-gray-200 flex justify-center items-center bg-primary py-12 px-4 relative mt-6">
                         <div>
                             <p className="text-center font-semibold text-2xl">
                                 {journals?.length ? journals.length : 0}
                             </p>
-                            <h2 className="text-2xl mb-2 ">Your Journals</h2>
+                            <h2 className="text-2xl mb-3 font-semibold">
+                                Your Journals
+                            </h2>
                             <Link
                                 to={"/dashboard/add-journal"}
-                                className="btn-primary ">
+                                className="btn-primary text-lg">
                                 Add journal
                             </Link>
                         </div>

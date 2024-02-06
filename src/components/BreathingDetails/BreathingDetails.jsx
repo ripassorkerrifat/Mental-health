@@ -13,9 +13,9 @@ export default function BreathingDetails({
                     <div className="fixed inset-[20px] bottom-0 md:top-[88px] top-[80px] overflow-x-hidden overflow-y-auto z-[9999999] outline-none focus:outline-none ">
                         <div className="relative w-auto my-6 mx-auto max-w-4xl">
                             {/*content*/}
-                            <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-secondary outline-none focus:outline-none">
+                            <div className=" rounded-lg shadow-lg relative flex flex-col w-full bg-secondary outline-none focus:outline-none">
                                 {/*header*/}
-                                <div className="flex items-start justify-between md:px-10 p-5 border-b border-solid border-blueGray-200 rounded-t">
+                                <div className="flex items-start justify-between md:px-10 p-5 border-b border-solid border-gray-700 border-blueGray-200 rounded-t">
                                     <h3 className="text-2xl font-semibold ">
                                         <span> {currentData.title}</span>
                                     </h3>
@@ -43,7 +43,7 @@ export default function BreathingDetails({
                                     </div>
                                 </motion.div>
                                 {/*footer*/}
-                                <div className="flex items-center justify-end  border-t border-solid border-blueGray-200 rounded-b">
+                                <div className="flex items-center justify-end  border-t border-solid border-gray-700 border-blueGray-200 rounded-b">
                                     <button
                                         className="font-bold uppercase px-6 py-2 text-base outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                                         type="button"

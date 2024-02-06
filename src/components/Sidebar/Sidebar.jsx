@@ -1,10 +1,12 @@
 import React from "react";
-import {FaHome} from "react-icons/fa";
 import {ImProfile} from "react-icons/im";
 import {IoAdd, IoJournal} from "react-icons/io5";
 import {Link, Outlet} from "react-router-dom";
+import {useUserContext} from "../../context/AuthProvider";
 
 const Sidebar = () => {
+    const {user} = useUserContext();
+    console.log(user);
     return (
         <div className="flex space-x-4 my-9">
             <div className=" p-4 w-72 bg-primary  text-dark  shadow-xl">
@@ -12,14 +14,14 @@ const Sidebar = () => {
                     <div className="space-y-4">
                         <div className="flex flex-col justify-center items-center mt-8">
                             <img
-                                className="w-20 h-20 rounded-full"
-                                src="https://images.filmibeat.com/img/popcorn/profile_photos/meenakshi-chaudhary-20201018102010-48130.jpg"
+                                className="w-20 h-20 object-cover rounded-full"
+                                src={user?.avatar}
                                 alt=""
                             />
                             <h2 className="text-lg font-semibold">
-                                Ripas Sorker Rifat
+                                {user?.name}
                             </h2>
-                            <p>ripassorkerrifat@gmail.com</p>
+                            <p>{user?.email}</p>
                         </div>
 
                         <div className="pt-3">
@@ -32,7 +34,7 @@ const Sidebar = () => {
                                 to={"journaling"}
                                 className="text-center w-full  mt-3 inline-flex items-center font-semibold hover:bg-gray-500  px-3 py-2 rounded-lg">
                                 <IoJournal size={20} className="mr-2" />
-                                Journaling
+                                My Journals
                             </Link>
                             <Link
                                 to={"add-journal"}
@@ -44,7 +46,7 @@ const Sidebar = () => {
                     </div>
                 </div>
             </div>
-            <div className=" flex-1 h-[86vh] p-5 overflow-x-hidden overscroll-y-auto">
+            <div className=" flex-1 h-[80vh] p-5 overflow-x-hidden overscroll-y-auto">
                 <div className="">
                     <Outlet />
                 </div>
