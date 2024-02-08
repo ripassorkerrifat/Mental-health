@@ -1,6 +1,7 @@
 import React, {createContext, useContext, useEffect, useState} from "react";
 import {getUserInfoFromToken} from "../utils/getUserInfoFromToken";
 import {config} from "../utils/envCongif";
+import Loading from "../utils/Loading";
 
 export const UserContext = createContext();
 
@@ -35,6 +36,10 @@ export const AuthProvider = ({children}) => {
             setLoading(false);
         }
     }, [token]);
+
+    if (loading) {
+        return <Loading />;
+    }
 
     const authInfo = {user, setUser, loading, setLoading, token, setToken};
     return (

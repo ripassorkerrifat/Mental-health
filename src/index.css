@@ -18,8 +18,12 @@ body {
     padding: 0 15px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 span {
-    background: -webkit-linear-gradient(-45deg, #805ad5, #ed64a6);
+    background: -webkit-linear-gradient(-45deg, #7741ec, #e04b93);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

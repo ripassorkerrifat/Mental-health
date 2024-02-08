@@ -57,10 +57,10 @@ const AddJournal = () => {
     };
 
     return (
-        <div className="container">
+        <div>
             <form
                 onSubmit={handleSubmit}
-                className=" md:p-10 bg-primary rounded-md text-gray-200 shadow-lg mt-7">
+                className=" md:p-10 w-full bg-primary rounded-md text-gray-200 shadow-lg mt-7 p-4">
                 <div>
                     <div>
                         <div className="flex justify-between items-center">

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import Container from "../../utils/Container";
 import MoodDetailModals from "../MoodDetailModal/MoodDetailModal";
 import Heading from "../../utils/Heading";
@@ -40,6 +40,7 @@ const MoodDetails = () => {
                     <motion.h3
                         whileInView={{opacity: [0, 1], x: [-20, 0]}}
                         transition={{duration: 0.7, delay: 0}}
+                        initial={{opacity: 0}}
                         className=" text-xl mt-2">
                         Here are some tips for you.
                     </motion.h3>
@@ -53,12 +54,25 @@ const MoodDetails = () => {
                                 }}
                                 whileInView={{opacity: [0, 1], y: [0, -20]}}
                                 transition={{duration: 0.7, delay: 0.4}}
+                                initial={{opacity: 0}}
                                 className="bg-primary rounded-md p-6 text-center flex justify-center items-center">
                                 <h2 className=" text-lg font-semibold">
                                     <b>{i + 1}</b> {".  "} {dt.heading}
                                 </h2>
                             </motion.div>
                         ))}
+                        <motion.div
+                            whileInView={{opacity: [0, 1], y: [0, -20]}}
+                            transition={{duration: 0.7, delay: 0.4}}
+                            initial={{opacity: 0}}
+                            className="bg-primary rounded-md p-6 text-center flex justify-center items-center">
+                            <Link
+                                to={`/write-dow-the-reason-of/${currentData?.mood}`}
+                                className=" text-lg font-semibold">
+                                <b>{currentData?.guides?.length + 1}</b> {".  "}{" "}
+                                Write down the reason.
+                            </Link>
+                        </motion.div>
                     </div>
                 </div>
             </div>

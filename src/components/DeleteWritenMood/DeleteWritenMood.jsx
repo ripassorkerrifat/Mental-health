@@ -1,24 +1,30 @@
-import {useUserContext} from "../../context/AuthProvider";
 import {config} from "../../utils/envCongif";
+import {toast} from "react-hot-toast";
 
-const ClearChat = ({showModal, setShowModal, setMessages}) => {
-    const {user} = useUserContext();
+function DeleteWritenModal({
+    showModal,
+    setShowModal,
+    refetch,
+    setRefetch,
+    data,
+}) {
     const handleDelete = () => {
-        fetch(`${config.base_url}/user/chat-with-ai/${user._id}`, {
+        fetch(`${config.base_url}/mood/write/${data._id}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
+                Authorization: `${localStorage.getItem("accessToken")}`,
             },
         })
             .then((res) => res.json())
             .then((data) => {
                 if (data.success) {
-                    setMessages([]);
+                    toast.success("Deleted successfully");
+                    setRefetch(!refetch);
                     setShowModal(false);
                 } else {
-                    console.log(data);
+                    toast.error(data?.message);
                     setShowModal(false);
-                    return toast.error("Something went wrong");
                 }
             });
     };
@@ -32,8 +38,7 @@ const ClearChat = ({showModal, setShowModal, setMessages}) => {
                             <div className=" rounded-lg shadow-lg relative text-gray-200 flex flex-col w-full bg-primary outline-none focus:outline-none">
                                 <div className="flex flex-col  justify-center items-center py-20">
                                     <h3 className="text-xl font-semibold mb-4 ">
-                                        Are you sure you want to delete this
-                                        conversation?
+                                        Are you sure you want to delete this?
                                     </h3>
                                     <div className="flex space-x-4">
                                         <button
@@ -56,6 +61,6 @@ const ClearChat = ({showModal, setShowModal, setMessages}) => {
             )}
         </>
     );
-};
+}
 
-export default ClearChat;
+export default DeleteWritenModal;

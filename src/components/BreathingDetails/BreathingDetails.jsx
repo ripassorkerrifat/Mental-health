@@ -29,6 +29,7 @@ export default function BreathingDetails({
                                 <motion.div
                                     whileInView={{opacity: [0, 1], y: [20, 0]}}
                                     transition={{duration: 0.9}}
+                                    initial={{opacity: 0}}
                                     className="relative md:px-10 p-5 flex-auto ">
                                     <div>
                                         <p className=" text-lg leading-relaxed">

@@ -6,19 +6,27 @@ import {formattedDate} from "../../utils/formateDateTime";
 import {IoIosArrowForward} from "react-icons/io";
 import {motion} from "framer-motion";
 import JournalModel from "../../components/JournalModel/JournalModel";
+import Loading from "../../utils/Loading";
 
 const Journals = () => {
     const [journals, setJournals] = useState([]);
     const [showModal, setShowModal] = useState(false);
     const [currentJournal, setCurrentJournal] = useState({});
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
+        setLoading(true);
         fetch(`${config.base_url}/journal`)
             .then((res) => res.json())
             .then((data) => {
                 setJournals(data.data);
+                setLoading(false);
             });
     }, []);
+
+    if (loading) {
+        return <Loading />;
+    }
 
     return (
         <div className="container min-h-[70vh]">
@@ -30,6 +38,7 @@ const Journals = () => {
                                 <motion.div
                                     whileInView={{opacity: [0, 1], y: [0, -20]}}
                                     transition={{duration: 0.7, delay: 0.4}}
+                                    initial={{opacity: 0}}
                                     key={i}
                                     className="flex flex-col  bg-primary border border-gray-700 shadow-sm rounded-lg md:p-0 p-5">
                                     <div className="p-4 md:p-5">

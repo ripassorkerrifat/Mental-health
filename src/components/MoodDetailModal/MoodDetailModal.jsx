@@ -15,20 +15,21 @@ export default function MoodDetailModals({
                             {/*content*/}
                             <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-primary outline-none focus:outline-none">
                                 {/*header*/}
-                                <div className="flex items-start justify-between md:px-10 p-5 border-b border-solid border-blueGray-200 rounded-t">
+                                <div className="flex items-start justify-between md:px-10 p-5 border-b border-solid  border-gray-700 rounded-t">
                                     <h3 className="text-2xl font-semibold text-gray-200">
                                         <span> {currentGuide.heading}</span>
                                     </h3>
                                     <button
                                         className="p-1 ml-auto  float-right text-2xl  leading-none font-semibold outline-none focus:outline-none"
                                         onClick={() => setShowModal(false)}>
-                                        <ImCancelCircle className="text-gray-200" />
+                                        <ImCancelCircle className="text-gray-300" />
                                     </button>
                                 </div>
                                 {/*body*/}
                                 <motion.div
                                     whileInView={{opacity: [0, 1], y: [20, 0]}}
                                     transition={{duration: 0.9}}
+                                    initial={{opacity: 0}}
                                     className="relative md:px-10 p-5 flex-auto text-gray-200">
                                     <div>
                                         {currentGuide?.tips?.map((s, i) => (
@@ -41,7 +42,7 @@ export default function MoodDetailModals({
                                     </div>
                                 </motion.div>
                                 {/*footer*/}
-                                <div className="flex items-center justify-end  border-t border-solid border-blueGray-200 rounded-b">
+                                <div className="flex items-center justify-end  border-t border-solid border-gray-700 rounded-b">
                                     <button
                                         className="font-bold uppercase px-6 py-2 text-base outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                                         type="button"

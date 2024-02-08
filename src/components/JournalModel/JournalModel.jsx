@@ -74,6 +74,7 @@ const JournalModel = ({showModal, setShowModal, currentJournal}) => {
                                 <motion.div
                                     whileInView={{opacity: [0, 1], y: [20, 0]}}
                                     transition={{duration: 0.5}}
+                                    initial={{opacity: 0}}
                                     className="relative md:px-10 p-5 flex-auto ">
                                     <div>
                                         {currentJournal?.desc

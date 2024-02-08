@@ -47,6 +47,7 @@ const Profile = () => {
                 <motion.div
                     whileInView={{opacity: [0, 1], y: [0, -20]}}
                     transition={{duration: 0.5, delay: 0.4}}
+                    initial={{opacity: 0}}
                     className="">
                     <div className="flex justify-center items-center">
                         <Chart
@@ -130,6 +131,7 @@ const Profile = () => {
                     <motion.div
                         whileInView={{opacity: [0, 1], y: [0, -20]}}
                         transition={{duration: 0.5, delay: 0.4}}
+                        initial={{opacity: 0}}
                         className="rounded-lg text-gray-200 flex justify-center items-center bg-primary py-12 px-4 relative mt-6">
                         <div>
                             <p className="text-center font-semibold text-2xl">

@@ -44,6 +44,7 @@ const BreathingExercise = () => {
                                 <motion.div
                                     whileInView={{opacity: [0, 1], x: [-20, 0]}}
                                     transition={{duration: 0.7, delay: d.deley}}
+                                    initial={{opacity: 0}}
                                     key={i}
                                     className="flex flex-col items-center justify-center text-center bg-secondary border border-gray-700 shadow-sm rounded-lg md:p-0 p-4">
                                     <div className="p-4 md:p-5">
@@ -81,6 +82,7 @@ const BreathingExercise = () => {
                                     key={i}
                                     whileInView={{opacity: [0, 1], x: [-20, 0]}}
                                     transition={{duration: 0.7, delay: d.deley}}
+                                    initial={{opacity: 0}}
                                     className="flex flex-col items-center justify-center text-center bg-secondary border border-gray-700 shadow-sm rounded-lg md:p-0 p-4">
                                     <div className="p-4 md:p-5">
                                         <h3 className="text-lg font-bold text-gray-100">

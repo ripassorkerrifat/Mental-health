@@ -43,12 +43,12 @@ const Navbar = () => {
                         />
                     </Link>
                     <div
-                        className="text-3xl md:hidden"
+                        className="text-3xl md:hidden text-gray-300"
                         onClick={() => setOpen(!open)}>
                         {open ? <MdOutlineCancel /> : <HiBars3 />}
                     </div>
                 </div>
-                <ul className="md:flex hidden  space-x-2 items-center gap-7 font-[Poppins]">
+                <ul className="md:flex hidden  space-x-1 items-center gap-7 font-[Poppins]">
                     <li>
                         <Link
                             to="/"
@@ -58,6 +58,13 @@ const Navbar = () => {
                     </li>
                     <li>
                         <Link
+                            to="/journals"
+                            className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-lg">
+                            Journals
+                        </Link>
+                    </li>{" "}
+                    <li>
+                        <Link
                             to="/breathing-exercises"
                             className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-lg">
                             Exersices
@@ -65,16 +72,16 @@ const Navbar = () => {
                     </li>
                     <li>
                         <Link
-                            to="/chat-with-bot"
+                            to="/meditations"
                             className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-lg">
-                            Chat with bot
+                            Meditations
                         </Link>
                     </li>
                     <li>
                         <Link
-                            to="/journals"
+                            to="/chat-with-bot"
                             className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-lg">
-                            Journals
+                            Chat Bot
                         </Link>
                     </li>
                     <li>
@@ -84,7 +91,6 @@ const Navbar = () => {
                             Dashboard
                         </Link>
                     </li>
-
                     <li>
                         <button
                             onClick={handleLogout}
@@ -94,7 +100,7 @@ const Navbar = () => {
                     </li>
                 </ul>
                 <ul
-                    className={`md:hidden text-center bg-black fixed w-full top-16 overflow-y-auto bottom-0 py-10 mt-7 pl-4 duration-500 ${
+                    className={`md:hidden flex flex-col space-y-3 text-center bg-secondary fixed w-full top-16 overflow-y-auto bottom-0 py-10 mt-7 pl-4 duration-500 ${
                         open ? "left-0" : "left-[-100%]"
                     }
         `}>
@@ -105,27 +111,47 @@ const Navbar = () => {
                             Home
                         </Link>
                     </li>
-
                     <li>
                         <Link
-                            to="/services"
-                            className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-lg px-3">
-                            Services
+                            to="/journals"
+                            className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-lg">
+                            Journals
+                        </Link>
+                    </li>{" "}
+                    <li>
+                        <Link
+                            to="/breathing-exercises"
+                            className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-lg">
+                            Exersices
                         </Link>
                     </li>
                     <li>
                         <Link
-                            to="/portfolio"
-                            className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-lg px-3">
-                            Portfolio
+                            to="/meditations"
+                            className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-lg">
+                            Meditations
                         </Link>
                     </li>
                     <li>
                         <Link
-                            to="/pricing"
-                            className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-lg px-3">
-                            Pricing
+                            to="/chat-with-bot"
+                            className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-lg">
+                            Chat with Bot
                         </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to="/dashboard/profile"
+                            className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-lg">
+                            Dashboard
+                        </Link>
+                    </li>
+                    <li>
+                        <button
+                            onClick={handleLogout}
+                            className="py-1.5 btn-primary">
+                            Logout
+                        </button>
                     </li>
                 </ul>
             </div>

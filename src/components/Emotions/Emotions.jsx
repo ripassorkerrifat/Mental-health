@@ -7,6 +7,7 @@ const Emotions = ({anxious, stressed, happy, angry, sad}) => {
         <motion.div
             whileInView={{opacity: [0, 1], y: [0, -20]}}
             transition={{duration: 0.5, delay: 0.4}}
+            initial={{opacity: 0}}
             className={`relative rounded-lg text-gray-200 flex justify-center items-center mt-10  py-10 px-4 ${
                 path == "/" ? "bg-secondary" : "bg-primary"
             }`}>

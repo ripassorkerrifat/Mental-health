@@ -49,7 +49,7 @@ const Chat = () => {
         const response = await openai.chat.completions.create({
             model: "gpt-3.5-turbo",
             messages: [userPrompt], // Pass the user's prompt to the API
-            // max_tokens: 20,
+            max_tokens: 20,
         });
 
         const postData = {

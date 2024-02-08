@@ -12,6 +12,9 @@ import MyJournals from "../pages/Dashboard/MyJournals";
 import AddJournal from "../pages/Dashboard/AddJournal";
 import Journals from "../pages/Journals/Journals";
 import Chat from "../pages/Chat/Chat";
+import Meditations from "../pages/Meditations/Meditations";
+import MoodReason from "../pages/MoodReason/MoodReason";
+import MyWritenMood from "../pages/Dashboard/MyWritenMood";
 
 export const router = createBrowserRouter([
     {
@@ -47,10 +50,26 @@ export const router = createBrowserRouter([
                 ),
             },
             {
+                path: "/meditations",
+                element: (
+                    <PrivetRouter>
+                        <Meditations />
+                    </PrivetRouter>
+                ),
+            },
+            {
                 path: "/journals",
                 element: (
                     <PrivetRouter>
                         <Journals />
+                    </PrivetRouter>
+                ),
+            },
+            {
+                path: "/write-dow-the-reason-of/:mood",
+                element: (
+                    <PrivetRouter>
+                        <MoodReason />
                     </PrivetRouter>
                 ),
             },
@@ -102,6 +121,14 @@ export const router = createBrowserRouter([
                 element: (
                     <PrivetRouter>
                         <Profile />
+                    </PrivetRouter>
+                ),
+            },
+            {
+                path: "/dashboard/my-write-mood",
+                element: (
+                    <PrivetRouter>
+                        <MyWritenMood />
                     </PrivetRouter>
                 ),
             },

@@ -8,6 +8,7 @@ import {motion} from "framer-motion";
 import JournalModel from "../../components/JournalModel/JournalModel";
 import DeleteModal from "../../components/Deletemodal/Deletemodal";
 import {Link} from "react-router-dom";
+import Loading from "../../utils/Loading";
 
 const MyJournals = () => {
     const [journals, setJournals] = useState([]);
@@ -16,24 +17,32 @@ const MyJournals = () => {
     const [showDeleteModal, setShowDeleteModal] = useState(false);
     const [currentJournal, setCurrentJournal] = useState({});
     const [refetch, setRefetch] = useState(true);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
+        setLoading(true);
         fetch(`${config.base_url}/journal/user/${user._id}`)
             .then((res) => res.json())
             .then((data) => {
                 setJournals(data.data);
+                setLoading(false);
             });
     }, [refetch]);
 
+    if (loading) {
+        return <Loading />;
+    }
+
     return (
         <div>
-            <div className="grid lg:grid-cols-3  md:grid-cols-2  grid-cols-1 gap-10 text-gray-200">
+            <div className="grid lg:grid-cols-3  md:grid-cols-2  grid-cols-1 gap-10 text-gray-200 mt-5">
                 {journals?.length ? (
                     <>
                         {journals?.map((jn, i) => (
                             <motion.div
                                 whileInView={{opacity: [0, 1], y: [0, -20]}}
                                 transition={{duration: 0.7, delay: 0.4}}
+                                initial={{opacity: 0}}
                                 key={i}
                                 className="flex flex-col  bg-primary border border-gray-700 shadow-sm rounded-lg md:p-0 p-5">
                                 <div className="p-4 md:p-5">
