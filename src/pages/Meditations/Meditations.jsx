@@ -431,6 +431,15 @@ const Meditations = () => {
                             </h3>
                         </motion.div>
                         <div className="pb-2">
+                            <div className="mb-10 flex justify-center items-center">
+                                <iframe
+                                    className="w-full md:w-[800px] md:h-[400px]"
+                                    src="https://www.youtube.com/embed/YFSc7Ck0Ao0?si=bwNT1rdbd5cbzEpA"
+                                    title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
+                            </div>
                             <motion.li
                                 whileInView={{opacity: [0, 1], y: [0, -20]}}
                                 transition={{duration: 0.5, delay: 0.4}}
@@ -443,19 +452,16 @@ const Meditations = () => {
                                 without trying to control your breathing. When
                                 your mind wanders, gently bring your focus back
                                 to the breath.
-                                <div>
-                                    <span>
-                                        <b>See video</b>:{" "}
-                                        <a
-                                            className="hover:underline"
-                                            href="https://youtu.be/YFSc7Ck0Ao0?si=XLdo9rxuUdrjjNeI"
-                                            target="_blank"
-                                            rel="noopener noreferrer">
-                                            https://youtu.be/YFSc7Ck0Ao0?si=XLdo9rxuUdrjjNeI
-                                        </a>
-                                    </span>
-                                </div>
                             </motion.li>
+                            <div className="mb-10 flex justify-center items-center">
+                                <iframe
+                                    className="w-full md:w-[800px] md:h-[400px]"
+                                    src="https://www.youtube.com/embed/0zrOqOKUbx0?si=rRaAKX2OAUGR3HRw"
+                                    title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
+                            </div>
                             <motion.li
                                 whileInView={{opacity: [0, 1], y: [0, -20]}}
                                 transition={{duration: 0.5, delay: 0.4}}
@@ -467,19 +473,16 @@ const Meditations = () => {
                                 your head and moving down to your toes. Notice
                                 any sensations, tensions, or areas of relaxation
                                 as you scan through each body part.
-                                <div>
-                                    <span>
-                                        <b>See video</b>:{" "}
-                                        <a
-                                            className="hover:underline"
-                                            href="https://youtu.be/0zrOqOKUbx0?si=9-m8gnqZaPbZ5S9p"
-                                            target="_blank"
-                                            rel="noopener noreferrer">
-                                            https://youtu.be/0zrOqOKUbx0?si=9-m8gnqZaPbZ5S9p
-                                        </a>
-                                    </span>
-                                </div>
                             </motion.li>
+                            <div className="mb-10 flex justify-center items-center">
+                                <iframe
+                                    className="w-full md:w-[800px] md:h-[400px]"
+                                    src="https://www.youtube.com/embed/TdSgBB1dqNk?si=LwRukSY9hTnm75Mr"
+                                    title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
+                            </div>
                             <motion.li
                                 whileInView={{opacity: [0, 1], y: [0, -20]}}
                                 transition={{duration: 0.5, delay: 0.4}}
@@ -494,19 +497,16 @@ const Meditations = () => {
                                 live with ease." Then extend these wishes to
                                 others, such as loved ones, acquaintances, and
                                 even those you have difficulty with.
-                                <div>
-                                    <span>
-                                        <b>See video</b>:{" "}
-                                        <a
-                                            className="hover:underline"
-                                            href="https://youtu.be/TdSgBB1dqNk?si=UE38BD2-FPEpEZNa"
-                                            target="_blank"
-                                            rel="noopener noreferrer">
-                                            https://youtu.be/TdSgBB1dqNk?si=UE38BD2-FPEpEZNa
-                                        </a>
-                                    </span>
-                                </div>
                             </motion.li>
+                            <div className="mb-10 flex justify-center items-center">
+                                <iframe
+                                    className="w-full md:w-[800px] md:h-[400px]"
+                                    src="https://www.youtube.com/embed/aCwEwz1xU2M?si=iMYzKqQ39-Q9KyAo"
+                                    title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
+                            </div>
                             <motion.li
                                 whileInView={{opacity: [0, 1], y: [0, -20]}}
                                 transition={{duration: 0.5, delay: 0.4}}
@@ -518,19 +518,16 @@ const Meditations = () => {
                                 sensations in your feet, and the movement of
                                 your body. You can walk indoors or outdoors, in
                                 a straight line or in a circle.
-                                <div>
-                                    <span>
-                                        <b>See video</b>:{" "}
-                                        <a
-                                            className="hover:underline"
-                                            href="https://youtu.be/aCwEwz1xU2M?si=7PBuJkRzP5A0b9-r"
-                                            target="_blank"
-                                            rel="noopener noreferrer">
-                                            https://youtu.be/aCwEwz1xU2M?si=7PBuJkRzP5A0b9-r
-                                        </a>
-                                    </span>
-                                </div>
                             </motion.li>
+                            <div className="mb-10 flex justify-center items-center">
+                                <iframe
+                                    className="w-full md:w-[800px] md:h-[400px]"
+                                    src="https://www.youtube.com/embed/unCya_-8ECs?si=xkHRtm4vKFfgl4es"
+                                    title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
+                            </div>
                             <motion.li
                                 whileInView={{opacity: [0, 1], y: [0, -20]}}
                                 transition={{duration: 0.5, delay: 0.4}}
@@ -543,19 +540,16 @@ const Meditations = () => {
                                 internal sounds, like your breathing or
                                 heartbeat. Simply observe the sounds without
                                 judgment or attachment.
-                                <div>
-                                    <span>
-                                        <b>See video</b>:{" "}
-                                        <a
-                                            className="hover:underline"
-                                            href="https://youtu.be/unCya_-8ECs?si=HeZewSxTyk_erTPQ"
-                                            target="_blank"
-                                            rel="noopener noreferrer">
-                                            https://youtu.be/unCya_-8ECs?si=HeZewSxTyk_erTPQ
-                                        </a>
-                                    </span>
-                                </div>
                             </motion.li>
+                            <div className="mb-10 flex justify-center items-center">
+                                <iframe
+                                    className="w-full md:w-[800px] md:h-[400px]"
+                                    src="https://www.youtube.com/embed/hlwhmltvG1Y?si=2meddn5HImhQNqeI"
+                                    title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
+                            </div>
                             <motion.li
                                 whileInView={{opacity: [0, 1], y: [0, -20]}}
                                 transition={{duration: 0.5, delay: 0.4}}
@@ -567,19 +561,16 @@ const Meditations = () => {
                                 tranquil garden. Engage your senses by
                                 visualizing the sights, sounds, smells, and
                                 sensations of this imagined place.
-                                <div>
-                                    <span>
-                                        <b>See video</b>:{" "}
-                                        <a
-                                            className="hover:underline"
-                                            href="https://youtu.be/hlwhmltvG1Y?si=fSsZGJ1c5ruYpT45"
-                                            target="_blank"
-                                            rel="noopener noreferrer">
-                                            https://youtu.be/hlwhmltvG1Y?si=fSsZGJ1c5ruYpT45
-                                        </a>
-                                    </span>
-                                </div>
                             </motion.li>
+                            <div className="mb-10 flex justify-center items-center">
+                                <iframe
+                                    className="w-full md:w-[800px] md:h-[400px]"
+                                    src="https://www.youtube.com/embed/invL2KEt15Q?si=KWXKf6sJxaFtw-zy"
+                                    title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
+                            </div>
                             <motion.li
                                 whileInView={{opacity: [0, 1], y: [0, -20]}}
                                 transition={{duration: 0.5, delay: 0.4}}
@@ -592,18 +583,6 @@ const Meditations = () => {
                                 up to a predetermined number, such as ten. If
                                 you lose count or your mind wanders, simply
                                 start again from one.
-                                <div>
-                                    <span>
-                                        <b>See video</b>:{" "}
-                                        <a
-                                            className="hover:underline"
-                                            href="https://youtu.be/invL2KEt15Q?si=-oKz1QvJo5KbiQeN"
-                                            target="_blank"
-                                            rel="noopener noreferrer">
-                                            https://youtu.be/invL2KEt15Q?si=-oKz1QvJo5KbiQeN
-                                        </a>
-                                    </span>
-                                </div>
                             </motion.li>
                         </div>
                     </section>
