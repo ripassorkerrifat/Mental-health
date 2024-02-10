@@ -38,7 +38,7 @@ const LoginPage = () => {
                 fetch(`${config.base_url}/auth/login`, {
                     method: "POST",
                     headers: {
-                        "content-type": "application/json",
+                        "Content-type": "application/json",
                     },
                     body: JSON.stringify(loginInfo),
                 })
@@ -60,6 +60,7 @@ const LoginPage = () => {
                         }
                     })
                     .catch((err) => {
+                        console.log(err);
                         return toast.error(err);
                     });
             },
@@ -151,6 +152,13 @@ const LoginPage = () => {
                                                 </Link>
                                                 now
                                             </p>
+                                            <div>
+                                                <p>
+                                                    Demo account :
+                                                    ripassorkerrifat@gmail.com
+                                                </p>
+                                                <p> Password : asdasd</p>
+                                            </div>
                                         </div>
                                     </form>
                                 </div>

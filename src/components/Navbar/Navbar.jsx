@@ -37,7 +37,7 @@ const Navbar = () => {
                 <div className="md:w-auto w-full flex justify-between items-center">
                     <Link to="/" className="inline-flex items-center">
                         <img
-                            src="/public/logoo.png"
+                            src="/public/logo.png"
                             className=" w-[90px]  h-[75px] "
                             alt=""
                         />
