@@ -32,15 +32,19 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="bg-primary sticky -top-0 right-0 z-[99999999]  md:py-4 py-2">
+        <nav className="bg-primary sticky -top-0 right-0 z-[99999999]  py-7">
             <div className="flex items-center font-medium justify-between container">
                 <div className="md:w-auto w-full flex justify-between items-center">
                     <Link to="/" className="inline-flex items-center">
-                        <img
-                            src="../../assets/logo.png"
+                        {/* <img
+                            src="logo.png"
                             className=" w-[90px]  h-[75px] "
                             alt=""
-                        />
+                        /> */}
+                        <h1 className="text-3xl text-gray-200">
+                            <big className="text-5xl text-pink-500"> M</big>
+                            ental health
+                        </h1>
                     </Link>
                     <div
                         className="text-3xl md:hidden text-gray-300"

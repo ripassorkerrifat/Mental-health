@@ -12,7 +12,10 @@ const Footer = () => {
             <div className="container">
                 <div className="flex flex-wrap text-left md:text-left">
                     <div className="w-full md:w-6/12 ">
-                        <h4 className="text-3xl text-dark">Mentel Health</h4>
+                        <h1 className="text-3xl text-gray-200">
+                            <big className="text-5xl text-pink-500"> M</big>
+                            ental health
+                        </h1>
                         <h5 className="text-lg mt-0 mb-2 text-gray-200">
                             Connect with us on these platforms, and expect a
                             response within 1-2 days.
@@ -59,14 +62,14 @@ const Footer = () => {
                                     </li>
                                     <li>
                                         <Link
-                                            to={"/"}
+                                            to={"/breathing-exercises"}
                                             className=" hover:text-gray-400 duration-300 f pb-2 ">
                                             Breathing exercise
                                         </Link>
                                     </li>
                                     <li>
                                         <Link
-                                            to={"/"}
+                                            to={"/journals"}
                                             className=" hover:text-gray-400 duration-300 f pb-2 ">
                                             Journaling
                                         </Link>
@@ -101,9 +104,9 @@ const Footer = () => {
                                     </li>
                                     <li>
                                         <Link
-                                            to={"/"}
+                                            to={"/chat-with-bot"}
                                             className=" hover:text-gray-400 duration-300 f pb-2 ">
-                                            Journaling
+                                            Chat with Bot
                                         </Link>
                                     </li>
                                 </ul>
