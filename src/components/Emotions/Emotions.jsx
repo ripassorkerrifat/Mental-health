@@ -2,7 +2,6 @@ import {motion} from "framer-motion";
 import {useLocation} from "react-router-dom";
 const Emotions = ({anxious, stressed, happy, angry, sad}) => {
     const path = useLocation().pathname;
-    console.log(path);
     return (
         <motion.div
             whileInView={{opacity: [0, 1], y: [0, -20]}}

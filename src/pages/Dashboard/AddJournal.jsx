@@ -41,7 +41,8 @@ const AddJournal = () => {
         fetch(`${config.base_url}/journal`, {
             method: "POST",
             headers: {
-                "content-type": "application/json",
+                "Content-Type": "application/json",
+                Authorization: `${localStorage.getItem("accessToken")}`,
             },
             body: JSON.stringify(data),
         })

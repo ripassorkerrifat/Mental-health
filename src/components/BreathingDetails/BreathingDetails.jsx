@@ -37,7 +37,9 @@ export default function BreathingDetails({
                                             {currentData?.desc}
                                         </p>
                                         {currentData?.preoces?.map((s, i) => (
-                                            <li className=" text-lg  leading-relaxed mb-2">
+                                            <li
+                                                key={i}
+                                                className=" text-lg  leading-relaxed mb-2">
                                                 <b>{s.step}:</b> {s.desc}
                                             </li>
                                         ))}

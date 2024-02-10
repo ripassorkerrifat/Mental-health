@@ -16,7 +16,12 @@ const Journals = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetch(`${config.base_url}/journal`)
+        fetch(`${config.base_url}/journal`, {
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: `${localStorage.getItem("accessToken")}`,
+            },
+        })
             .then((res) => res.json())
             .then((data) => {
                 setJournals(data.data);

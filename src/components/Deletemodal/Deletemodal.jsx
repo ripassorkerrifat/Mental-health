@@ -7,7 +7,7 @@ function DeleteModal({showModal, setShowModal, refetch, setRefetch, data}) {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
-                Authorization: `Bearer ${localStorage.getItem("token")}`,
+                Authorization: `${localStorage.getItem("accessToken")}`,
             },
         })
             .then((res) => res.json())

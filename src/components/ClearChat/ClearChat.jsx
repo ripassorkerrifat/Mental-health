@@ -8,6 +8,7 @@ const ClearChat = ({showModal, setShowModal, setMessages}) => {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
+                Authorization: `${localStorage.getItem("accessToken")}`,
             },
         })
             .then((res) => res.json())

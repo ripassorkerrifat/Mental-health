@@ -11,18 +11,18 @@ const Navbar = () => {
     const [open, setOpen] = useState(false);
 
     const handleLogout = () => {
-        localStorage.removeItem("accessToken");
-        setToken("");
-        setUser(null);
-
         fetch(`${config.base_url}/auth/logout`, {
             headers: {
-                Authorization: `${token}`,
+                "Content-Type": "application/json",
+                Authorization: `${localStorage.getItem("accessToken")}`,
             },
         })
             .then((res) => res.json())
             .then((data) => {
                 if (data.success) {
+                    localStorage.removeItem("accessToken");
+                    setToken("");
+                    setUser(null);
                     toast.success("Logout successfully.");
                 }
             })

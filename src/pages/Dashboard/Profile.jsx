@@ -18,7 +18,12 @@ const Profile = () => {
     const [journals, setJournals] = useState([]);
 
     useEffect(() => {
-        fetch(`${config.base_url}/journal/user/${user._id}`)
+        fetch(`${config.base_url}/journal/user/${user._id}`, {
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: `${localStorage.getItem("accessToken")}`,
+            },
+        })
             .then((res) => res.json())
             .then((data) => {
                 setJournals(data.data);
@@ -27,7 +32,12 @@ const Profile = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`${config.base_url}/mood/${user._id}`)
+            fetch(`${config.base_url}/mood/${user._id}`, {
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `${localStorage.getItem("accessToken")}`,
+                },
+            })
                 .then((res) => res.json())
                 .then((data) => setAllMoods(data?.data));
         }

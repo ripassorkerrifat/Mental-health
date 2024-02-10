@@ -202,7 +202,7 @@ const WritenModal = ({showModal, setShowModal, data}) => {
                                             </h3>
                                             {
                                                 <li className="ml-8 list-decimal leading-relaxed font-normal text-gray-300 ">
-                                                    {data?.stepSeventh.step7}
+                                                    {data?.stepSeventh[0].title}
                                                 </li>
                                             }
                                         </div>
@@ -220,7 +220,7 @@ const WritenModal = ({showModal, setShowModal, data}) => {
                                             </h3>
                                             {
                                                 <li className="ml-8 list-decimal leading-relaxed font-normal text-gray-300 ">
-                                                    {data?.stepEighth.step8}
+                                                    {data?.stepEighth[0].title}
                                                 </li>
                                             }
                                         </div>

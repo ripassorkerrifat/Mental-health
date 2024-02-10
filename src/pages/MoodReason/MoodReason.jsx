@@ -67,6 +67,7 @@ const MoodReason = () => {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
+                Authorization: `${localStorage.getItem("accessToken")}`,
             },
             body: JSON.stringify(data),
         })

@@ -20,7 +20,12 @@ const MyWritenMood = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetch(`${config.base_url}/mood/write/user/${user?._id}`)
+        fetch(`${config.base_url}/mood/write/user/${user?._id}`, {
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: `${localStorage.getItem("accessToken")}`,
+            },
+        })
             .then((res) => res.json())
             .then((data) => {
                 setData(data.data);
@@ -58,6 +63,7 @@ const MyWritenMood = () => {
                                 whileInView={{opacity: [0, 1], y: [0, -20]}}
                                 transition={{duration: 0.7}}
                                 initial={{opacity: 0}}
+                                key={i}
                                 className="">
                                 <div
                                     className="flex justify-center flex-col items-center relative bg-primary rounded-md

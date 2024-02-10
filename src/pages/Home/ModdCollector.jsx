@@ -63,7 +63,12 @@ const MoodCollector = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`${config.base_url}/mood/${user._id}`)
+            fetch(`${config.base_url}/mood/${user._id}`, {
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `${localStorage.getItem("accessToken")}`,
+                },
+            })
                 .then((res) => res.json())
                 .then((data) => setAllMoods(data?.data));
         }
@@ -71,7 +76,12 @@ const MoodCollector = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`${config.base_url}/mood/get-last/${user._id}`)
+            fetch(`${config.base_url}/mood/get-last/${user._id}`, {
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `${localStorage.getItem("accessToken")}`,
+                },
+            })
                 .then((res) => res.json())
                 .then((data) => setLastOne(data?.data));
         }
@@ -98,7 +108,8 @@ const MoodCollector = () => {
         fetch(`${config.base_url}/mood`, {
             method: "POST",
             headers: {
-                "content-type": "application/json",
+                "Content-Type": "application/json",
+                Authorization: `${localStorage.getItem("accessToken")}`,
             },
             body: JSON.stringify(moodInfo),
         })
