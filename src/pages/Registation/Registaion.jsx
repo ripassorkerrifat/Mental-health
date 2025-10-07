@@ -7,15 +7,17 @@ import {useUserContext} from "../../context/AuthProvider";
 import {useEffect, useState} from "react";
 
 const Registation = () => {
-    const {token} = useUserContext();
+    const {token, user} = useUserContext();
     const navigate = useNavigate();
     const [file, setFile] = useState(null);
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
+    // Only redirect if both token AND user are valid
     useEffect(() => {
-        if (token) {
+        if (token && user) {
             navigate("/");
         }
-    }, [token]);
+    }, [token, user, navigate]);
     const initialResisterValues = {
         name: "",
         email: "",
@@ -32,6 +34,8 @@ const Registation = () => {
                     return toast.error("Profile picture is required.");
                 }
                 const {name, email, password} = values;
+                
+                setIsSubmitting(true);
                 try {
                     let avatar = "";
                     const formData = new FormData();
@@ -65,16 +69,34 @@ const Registation = () => {
                                                 "Account created successfully."
                                             );
                                             action.resetForm();
+                                            setFile(null);
                                             navigate("/login");
                                         } else {
                                             toast.error(dt.message);
                                             console.log(dt);
                                         }
+                                    })
+                                    .catch((err) => {
+                                        console.log(err);
+                                        toast.error("Failed to create account. Please try again.");
+                                    })
+                                    .finally(() => {
+                                        setIsSubmitting(false);
                                     });
+                            } else {
+                                toast.error("Failed to upload image. Please try again.");
+                                setIsSubmitting(false);
                             }
+                        })
+                        .catch((err) => {
+                            console.log(err);
+                            toast.error("Failed to upload image. Please try again.");
+                            setIsSubmitting(false);
                         });
                 } catch (error) {
                     console.log(error);
+                    toast.error("An error occurred. Please try again.");
+                    setIsSubmitting(false);
                 }
             },
         });
@@ -263,8 +285,19 @@ const Registation = () => {
                                             <div className="relative">
                                                 <button
                                                     type="submit"
-                                                    className="btn-primary  px-4 py-1.5 w-full">
-                                                    Sign Up Now
+                                                    disabled={isSubmitting}
+                                                    className="btn-primary  px-4 py-1.5 w-full disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2">
+                                                    {isSubmitting ? (
+                                                        <>
+                                                            <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                                                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                                                                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                                            </svg>
+                                                            <span>Creating Account...</span>
+                                                        </>
+                                                    ) : (
+                                                        "Sign Up Now"
+                                                    )}
                                                 </button>
                                             </div>
                                             <p className="text-gray-900">
