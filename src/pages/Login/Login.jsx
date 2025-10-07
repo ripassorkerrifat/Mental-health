@@ -192,7 +192,7 @@ const LoginPage = () => {
                                                     Demo account :
                                                     ripassorkerrifat@gmail.com
                                                 </p>
-                                                <p> Password : 123456</p>
+                                                <p> Password : asdasd</p>
                                             </div>
                                         </div>
                                     </form>
