@@ -55,16 +55,16 @@ const Footer = () => {
                                 <ul className="list-unstyled text-gray-200">
                                     <li>
                                         <Link
-                                            to={"/"}
+                                            to={"/about"}
                                             className=" hover:text-gray-400 duration-300 f pb-2 ">
-                                            About us
+                                            About Us
                                         </Link>
                                     </li>
                                     <li>
                                         <Link
-                                            to={"/breathing-exercises"}
+                                            to={"/resources"}
                                             className=" hover:text-gray-400 duration-300 f pb-2 ">
-                                            Breathing exercise
+                                            Resources
                                         </Link>
                                     </li>
                                     <li>
@@ -76,9 +76,9 @@ const Footer = () => {
                                     </li>
                                     <li>
                                         <Link
-                                            to={"/"}
+                                            to={"/contact"}
                                             className=" hover:text-gray-400 duration-300 f pb-2 ">
-                                            Contact us
+                                            Contact Us
                                         </Link>
                                     </li>
                                 </ul>
@@ -90,23 +90,30 @@ const Footer = () => {
                                 <ul className="list-unstyled text-gray-200">
                                     <li>
                                         <Link
-                                            to={"/"}
+                                            to="/privacy"
                                             className=" hover:text-gray-400 duration-300 f pb-2 ">
                                             Privacy Policy
                                         </Link>
                                     </li>
                                     <li>
                                         <Link
-                                            to={"/"}
+                                            to="/terms"
                                             className=" hover:text-gray-400 duration-300 f pb-2 ">
                                             Terms &amp; Conditions
                                         </Link>
                                     </li>
                                     <li>
                                         <Link
-                                            to={"/chat-with-bot"}
+                                            to="/meditations"
                                             className=" hover:text-gray-400 duration-300 f pb-2 ">
-                                            Chat with Bot
+                                            Meditations
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link
+                                            to="/chat-with-bot"
+                                            className=" hover:text-gray-400 duration-300 f pb-2 ">
+                                            Chat Support
                                         </Link>
                                     </li>
                                 </ul>

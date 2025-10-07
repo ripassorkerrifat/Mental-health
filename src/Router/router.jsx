@@ -10,18 +10,25 @@ import MoodDetails from "../components/MoodDetails/MoodDetails";
 import Profile from "../pages/Dashboard/Profile";
 import MyJournals from "../pages/Dashboard/MyJournals";
 import AddJournal from "../pages/Dashboard/AddJournal";
+import Goals from "../pages/Dashboard/Goals";
+import Statistics from "../pages/Dashboard/Statistics";
 import Journals from "../pages/Journals/Journals";
 import Chat from "../pages/Chat/Chat";
 import Meditations from "../pages/Meditations/Meditations";
 import MoodReason from "../pages/MoodReason/MoodReason";
 import MyWritenMood from "../pages/Dashboard/MyWritenMood";
+import About from "../pages/About/About";
+import Resources from "../pages/Resources/Resources";
+import Contact from "../pages/Contact/Contact";
+import Privacy from "../pages/Privacy/Privacy";
+import Terms from "../pages/Terms/Terms";
 
 export const router = createBrowserRouter([
     {
         path: "/",
         element: <Main />,
         errorElement: (
-            <div className="flex items-center justify-center mt-60">
+            <div className="flex items-center justify-center mt-60 text-gray-200">
                 <div>
                     <h2 className="text-4xl"> 404 Not found this page.</h2>
                     <Link
@@ -89,6 +96,38 @@ export const router = createBrowserRouter([
                     </PrivetRouter>
                 ),
             },
+            {
+                path: "/about",
+                element: (
+                    <PrivetRouter>
+                        <About />
+                    </PrivetRouter>
+                ),
+            },
+            {
+                path: "/resources",
+                element: (
+                    <PrivetRouter>
+                        <Resources />
+                    </PrivetRouter>
+                ),
+            },
+            {
+                path: "/contact",
+                element: (
+                    <PrivetRouter>
+                        <Contact />
+                    </PrivetRouter>
+                ),
+            },
+            {
+                path: "/privacy",
+                element: <Privacy />,
+            },
+            {
+                path: "/terms",
+                element: <Terms />,
+            },
         ],
     },
 
@@ -129,6 +168,22 @@ export const router = createBrowserRouter([
                 element: (
                     <PrivetRouter>
                         <MyWritenMood />
+                    </PrivetRouter>
+                ),
+            },
+            {
+                path: "/dashboard/goals",
+                element: (
+                    <PrivetRouter>
+                        <Goals />
+                    </PrivetRouter>
+                ),
+            },
+            {
+                path: "/dashboard/statistics",
+                element: (
+                    <PrivetRouter>
+                        <Statistics />
                     </PrivetRouter>
                 ),
             },

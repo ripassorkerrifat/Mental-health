@@ -7,7 +7,7 @@ import {config} from "../../utils/envCongif";
 import toast from "react-hot-toast";
 
 const Navbar = () => {
-    const {setUser, token, setToken} = useUserContext();
+    const {logout} = useUserContext();
     const [open, setOpen] = useState(false);
 
     const handleLogout = () => {
@@ -20,14 +20,19 @@ const Navbar = () => {
             .then((res) => res.json())
             .then((data) => {
                 if (data.success) {
-                    localStorage.removeItem("accessToken");
-                    setToken("");
-                    setUser(null);
+                    logout();
                     toast.success("Logout successfully.");
+                } else {
+                    // Even if backend fails, clear local auth
+                    logout();
+                    toast.success("Logged out.");
                 }
             })
             .catch((err) => {
                 console.log(err);
+                // Clear local auth even if backend call fails
+                logout();
+                toast.success("Logged out.");
             });
     };
 
@@ -52,46 +57,53 @@ const Navbar = () => {
                         {open ? <MdOutlineCancel /> : <HiBars3 />}
                     </div>
                 </div>
-                <ul className="md:flex hidden  space-x-1 items-center gap-7 font-[Poppins]">
+                <ul className="md:flex hidden  space-x-1 items-center gap-5 font-[Poppins]">
                     <li>
                         <Link
                             to="/"
-                            className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-lg">
+                            className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-base">
                             Home
                         </Link>
                     </li>
                     <li>
                         <Link
-                            to="/journals"
-                            className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-lg">
-                            Journals
+                            to="/about"
+                            className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-base">
+                            About
                         </Link>
-                    </li>{" "}
+                    </li>
                     <li>
                         <Link
-                            to="/breathing-exercises"
-                            className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-lg">
-                            Exersices
+                            to="/resources"
+                            className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-base">
+                            Resources
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to="/journals"
+                            className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-base">
+                            Journals
                         </Link>
                     </li>
                     <li>
                         <Link
                             to="/meditations"
-                            className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-lg">
+                            className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-base">
                             Meditations
                         </Link>
                     </li>
                     <li>
                         <Link
                             to="/chat-with-bot"
-                            className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-lg">
-                            Chat Bot
+                            className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-base">
+                            Chat
                         </Link>
                     </li>
                     <li>
                         <Link
                             to="/dashboard/profile"
-                            className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-lg">
+                            className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-base">
                             Dashboard
                         </Link>
                     </li>
@@ -111,27 +123,39 @@ const Navbar = () => {
                     <li className="mt-14">
                         <Link
                             to="/"
+                            onClick={() => setOpen(false)}
                             className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-lg px-3">
                             Home
                         </Link>
                     </li>
                     <li>
                         <Link
-                            to="/journals"
+                            to="/about"
+                            onClick={() => setOpen(false)}
                             className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-lg">
-                            Journals
+                            About
                         </Link>
-                    </li>{" "}
+                    </li>
                     <li>
                         <Link
-                            to="/breathing-exercises"
+                            to="/resources"
+                            onClick={() => setOpen(false)}
                             className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-lg">
-                            Exersices
+                            Resources
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to="/journals"
+                            onClick={() => setOpen(false)}
+                            className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-lg">
+                            Journals
                         </Link>
                     </li>
                     <li>
                         <Link
                             to="/meditations"
+                            onClick={() => setOpen(false)}
                             className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-lg">
                             Meditations
                         </Link>
@@ -139,13 +163,15 @@ const Navbar = () => {
                     <li>
                         <Link
                             to="/chat-with-bot"
+                            onClick={() => setOpen(false)}
                             className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-lg">
-                            Chat with Bot
+                            Chat
                         </Link>
                     </li>
                     <li>
                         <Link
                             to="/dashboard/profile"
+                            onClick={() => setOpen(false)}
                             className="inline-block hover:text-gray-400 duration-300 font-medium text-gray-200 text-lg">
                             Dashboard
                         </Link>
