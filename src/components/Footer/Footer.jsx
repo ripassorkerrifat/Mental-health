@@ -8,112 +8,119 @@ const Footer = () => {
         <motion.footer
             whileInView={{opacity: [0, 1], y: [0, -1]}}
             transition={{duration: 1.1, delay: 0.1}}
-            className="relative  pt-8 pb-6 bg-primary -mb-[20px]">
+            className="relative pt-16 pb-8 bg-gradient-to-b from-primary to-secondary border-t border-gray-700/50">
             <div className="container">
                 <div className="flex flex-wrap text-left md:text-left">
-                    <div className="w-full md:w-6/12 ">
-                        <h1 className="text-3xl text-gray-200">
-                            <big className="text-5xl text-pink-500"> M</big>
-                            ental health
-                        </h1>
-                        <h5 className="text-lg mt-0 mb-2 text-gray-200">
-                            Connect with us on these platforms, and expect a
-                            response within 1-2 days.
+                    <div className="w-full md:w-6/12 mb-8 md:mb-0">
+                        <div className="flex items-center gap-3 mb-4">
+                            <div className="w-14 h-14 bg-gradient-to-br from-pink-500 to-purple-500 rounded-xl flex items-center justify-center shadow-lg">
+                                <span className="text-3xl font-bold text-white">M</span>
+                            </div>
+                            <h1 className="text-3xl font-bold text-gray-200">
+                                Mental <span className="text-pink-500">Health</span>
+                            </h1>
+                        </div>
+                        <p className="text-base mt-4 mb-4 text-gray-300 max-w-md">
+                            Your journey to mental wellness starts here. We provide tools, 
+                            resources, and support for a healthier mind.
+                        </p>
+                        <h5 className="text-sm font-semibold mb-3 text-gray-400">
+                            Connect with us on social media
                         </h5>
-                        <div className="mt-4 md:mb-0 mb-6">
+                        <div className="flex gap-3">
                             <button
-                                className="bg-primary inline-flex text-blue-600  h-8 w-8 items-center justify-center align-center rounded-full  mr-2"
+                                className="bg-blue-600/20 hover:bg-blue-600/30 inline-flex text-blue-400 h-10 w-10 items-center justify-center rounded-lg border border-blue-500/30 hover:scale-110 transition-all"
                                 type="button">
-                                <MdFacebook size={24} />
+                                <MdFacebook size={20} />
                             </button>
 
                             <button
-                                className="bg-primary inline-flex text-rose-600  h-8 w-8 items-center justify-center align-center rounded-full  mr-2"
+                                className="bg-pink-600/20 hover:bg-pink-600/30 inline-flex text-pink-400 h-10 w-10 items-center justify-center rounded-lg border border-pink-500/30 hover:scale-110 transition-all"
                                 type="button">
-                                <FaInstagram size={24} />
+                                <FaInstagram size={20} />
                             </button>
 
                             <button
-                                className="bg-primary inline-flex text-purple-600  h-8 w-8 items-center justify-center align-center rounded-full  mr-2"
+                                className="bg-purple-600/20 hover:bg-purple-600/30 inline-flex text-purple-400 h-10 w-10 items-center justify-center rounded-lg border border-purple-500/30 hover:scale-110 transition-all"
                                 type="button">
-                                <FaTwitter size={24} />
+                                <FaTwitter size={20} />
                             </button>
 
                             <button
-                                className="bg-primary inline-flex text-green-600  h-8 w-8 items-center justify-center align-center rounded-full  mr-2"
+                                className="bg-green-600/20 hover:bg-green-600/30 inline-flex text-green-400 h-10 w-10 items-center justify-center rounded-lg border border-green-500/30 hover:scale-110 transition-all"
                                 type="button">
-                                <FaLinkedin size={24} />
+                                <FaLinkedin size={20} />
                             </button>
                         </div>
                     </div>
-                    <div className="w-full md:w-6/12 ">
+                    <div className="w-full md:w-6/12">
                         <div className="flex flex-wrap items-top mb-6">
                             <div className="w-full md:w-4/12 md:px-4 ml-auto">
-                                <p className="text-dark  font-semibold mb-2">
+                                <p className="text-gray-200 font-bold mb-4 text-lg">
                                     Useful Links
                                 </p>
-                                <ul className="list-unstyled text-gray-200">
+                                <ul className="list-unstyled space-y-2">
                                     <li>
                                         <Link
                                             to={"/about"}
-                                            className=" hover:text-gray-400 duration-300 f pb-2 ">
-                                            About Us
+                                            className="text-gray-300 hover:text-pink-400 duration-300 transition-colors text-sm">
+                                            → About Us
                                         </Link>
                                     </li>
                                     <li>
                                         <Link
                                             to={"/resources"}
-                                            className=" hover:text-gray-400 duration-300 f pb-2 ">
-                                            Resources
+                                            className="text-gray-300 hover:text-pink-400 duration-300 transition-colors text-sm">
+                                            → Resources
                                         </Link>
                                     </li>
                                     <li>
                                         <Link
                                             to={"/journals"}
-                                            className=" hover:text-gray-400 duration-300 f pb-2 ">
-                                            Journaling
+                                            className="text-gray-300 hover:text-pink-400 duration-300 transition-colors text-sm">
+                                            → Journaling
                                         </Link>
                                     </li>
                                     <li>
                                         <Link
                                             to={"/contact"}
-                                            className=" hover:text-gray-400 duration-300 f pb-2 ">
-                                            Contact Us
+                                            className="text-gray-300 hover:text-pink-400 duration-300 transition-colors text-sm">
+                                            → Contact Us
                                         </Link>
                                     </li>
                                 </ul>
                             </div>
-                            <div className="w-full md:w-4/12 md:px-4 md:mt-0 mt-4">
-                                <p className="text-dark  font-semibold mb-2">
+                            <div className="w-full md:w-4/12 md:px-4 md:mt-0 mt-8">
+                                <p className="text-gray-200 font-bold mb-4 text-lg">
                                     Other Resources
                                 </p>
-                                <ul className="list-unstyled text-gray-200">
+                                <ul className="list-unstyled space-y-2">
                                     <li>
                                         <Link
                                             to="/privacy"
-                                            className=" hover:text-gray-400 duration-300 f pb-2 ">
-                                            Privacy Policy
+                                            className="text-gray-300 hover:text-pink-400 duration-300 transition-colors text-sm">
+                                            → Privacy Policy
                                         </Link>
                                     </li>
                                     <li>
                                         <Link
                                             to="/terms"
-                                            className=" hover:text-gray-400 duration-300 f pb-2 ">
-                                            Terms &amp; Conditions
+                                            className="text-gray-300 hover:text-pink-400 duration-300 transition-colors text-sm">
+                                            → Terms &amp; Conditions
                                         </Link>
                                     </li>
                                     <li>
                                         <Link
                                             to="/meditations"
-                                            className=" hover:text-gray-400 duration-300 f pb-2 ">
-                                            Meditations
+                                            className="text-gray-300 hover:text-pink-400 duration-300 transition-colors text-sm">
+                                            → Meditations
                                         </Link>
                                     </li>
                                     <li>
                                         <Link
                                             to="/chat-with-bot"
-                                            className=" hover:text-gray-400 duration-300 f pb-2 ">
-                                            Chat Support
+                                            className="text-gray-300 hover:text-pink-400 duration-300 transition-colors text-sm">
+                                            → Chat Support
                                         </Link>
                                     </li>
                                 </ul>
@@ -121,12 +128,13 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className="border-t mb-3 border-gray-700 md:mx-4"></div>
-                <div className="flex flex-wrap items-center md:justify-between justify-center">
-                    <div className="w-full md:w-4/12 mx-auto text-center">
-                        <div className="text-sm  font-medium text-gray-300">
-                            Copyright © 2024 by Mentel Health and Wellbeing.
-                        </div>
+                <div className="border-t mt-8 pt-6 border-gray-700/50"></div>
+                <div className="flex flex-wrap items-center md:justify-between justify-center gap-4">
+                    <div className="text-sm text-gray-400">
+                        © 2025 <span className="text-pink-400 font-semibold">Mental Health</span>. All rights reserved.
+                    </div>
+                    <div className="text-sm text-gray-400">
+                        Made with <span className="text-red-500">❤️</span> for better mental wellness
                     </div>
                 </div>
             </div>
