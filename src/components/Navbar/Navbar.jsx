@@ -37,16 +37,19 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="bg-gradient-to-r from-primary via-primary to-secondary sticky top-0 right-0 z-[99999999] py-5 shadow-lg border-b border-gray-700/50 backdrop-blur-sm">
+        <nav className="bg-gradient-to-r from-primary via-primary to-secondary sticky top-0 right-0 z-[99999999] py-3 shadow-lg border-b border-gray-700/50 backdrop-blur-sm">
             <div className="flex items-center font-medium justify-between container">
                 <div className="md:w-auto w-full flex justify-between items-center">
                     <Link to="/" className="inline-flex items-center group">
                         <div className="flex items-center gap-2">
                             <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-500 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                                <span className="text-2xl font-bold text-white">M</span>
+                                <span className="text-2xl font-bold text-white">
+                                    M
+                                </span>
                             </div>
                             <h1 className="text-2xl font-bold text-gray-200 group-hover:text-pink-400 transition-colors">
-                                Mental <span className="text-pink-500">Health</span>
+                                Mental{" "}
+                                <span className="text-pink-500">Health</span>
                             </h1>
                         </div>
                     </Link>
@@ -60,49 +63,49 @@ const Navbar = () => {
                     <li>
                         <Link
                             to="/"
-                            className="px-4 py-2 rounded-lg hover:bg-gray-700/50 duration-300 font-medium text-gray-200 text-sm transition-all">
+                            className="px-4 py-2 rounded-lg hover:bg-gray-700/50 duration-300 font-medium text-gray-200 text-base transition-all">
                             Home
                         </Link>
                     </li>
                     <li>
                         <Link
                             to="/about"
-                            className="px-4 py-2 rounded-lg hover:bg-gray-700/50 duration-300 font-medium text-gray-200 text-sm transition-all">
+                            className="px-4 py-2 rounded-lg hover:bg-gray-700/50 duration-300 font-medium text-gray-200 text-base transition-all">
                             About
                         </Link>
                     </li>
                     <li>
                         <Link
                             to="/resources"
-                            className="px-4 py-2 rounded-lg hover:bg-gray-700/50 duration-300 font-medium text-gray-200 text-sm transition-all">
+                            className="px-4 py-2 rounded-lg hover:bg-gray-700/50 duration-300 font-medium text-gray-200 text-base transition-all">
                             Resources
                         </Link>
                     </li>
                     <li>
                         <Link
                             to="/journals"
-                            className="px-4 py-2 rounded-lg hover:bg-gray-700/50 duration-300 font-medium text-gray-200 text-sm transition-all">
+                            className="px-4 py-2 rounded-lg hover:bg-gray-700/50 duration-300 font-medium text-gray-200 text-base transition-all">
                             Journals
                         </Link>
                     </li>
                     <li>
                         <Link
                             to="/meditations"
-                            className="px-4 py-2 rounded-lg hover:bg-gray-700/50 duration-300 font-medium text-gray-200 text-sm transition-all">
+                            className="px-4 py-2 rounded-lg hover:bg-gray-700/50 duration-300 font-medium text-gray-200 text-base transition-all">
                             Meditations
                         </Link>
                     </li>
                     <li>
                         <Link
                             to="/chat-with-bot"
-                            className="px-4 py-2 rounded-lg hover:bg-gray-700/50 duration-300 font-medium text-gray-200 text-sm transition-all">
+                            className="px-4 py-2 rounded-lg hover:bg-gray-700/50 duration-300 font-medium text-gray-200 text-base transition-all">
                             Chat
                         </Link>
                     </li>
                     <li>
                         <Link
                             to="/dashboard/profile"
-                            className="px-4 py-2 rounded-lg bg-gradient-to-r from-purple-600/20 to-pink-600/20 hover:from-purple-600/30 hover:to-pink-600/30 border border-purple-500/30 duration-300 font-medium text-gray-200 text-sm transition-all">
+                            className="px-4 py-2 rounded-lg bg-gradient-to-r from-purple-600/20 to-pink-600/20 hover:from-purple-600/30 hover:to-pink-600/30 border border-purple-500/30 duration-300 font-medium text-gray-200 text-base transition-all">
                             Dashboard
                         </Link>
                     </li>

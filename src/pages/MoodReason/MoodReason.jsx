@@ -86,439 +86,331 @@ const MoodReason = () => {
 
     return (
         <Container>
-            <div className="text-gray-300 ">
-                <div>
-                    <Heading
-                        title={`Write down it why you are felling ${mood}?`}
-                        clases={"capitalize"}
-                    />
-                </div>
-                <form onSubmit={handleSubmit}>
+            <div className="text-gray-300 py-12">
+                {/* Hero Header */}
+                <motion.div
+                    initial={{opacity: 0, y: 30}}
+                    animate={{opacity: 1, y: 0}}
+                    transition={{duration: 0.6}}
+                    className="text-center mb-12">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                        Why are you feeling{" "}
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 capitalize">
+                            {mood}
+                        </span>
+                        ?
+                    </h1>
+                    <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+                        Take a moment to reflect on your emotions. Writing down
+                        your thoughts can help you understand and process your
+                        feelings better.
+                    </p>
+                </motion.div>
+
+                <form
+                    onSubmit={handleSubmit}
+                    className="max-w-5xl mx-auto space-y-8">
+                    {/* Step 1 */}
                     <motion.div
-                        whileInView={{opacity: [0, 1], y: [0, -20]}}
-                        transition={{duration: 0.7, delay: 0.1}}
-                        className=" text-lg mb-4 pt-6">
-                        <h3 className="font-semibold text-gray-200">
-                            1. I am feeling {mood.toLocaleLowerCase()} because.
-                        </h3>
-                        <p>
-                            List specific reasons, situations, or thoughts that
-                            are contributing to your stress. Be honest and
-                            detailed about what's on your mind.
-                        </p>
-                        <div className="grid md:grid-cols-3 gap-10">
-                            <div className="relative mt-3">
-                                <input
-                                    id="step11"
-                                    name="step11"
-                                    type="text"
-                                    className="peer placeholder-transparent bg-secondary h-10 w-full border-b-2  border-gray-600 text-gray-200 focus:outline-none placeholder:text-gray-400 pl-4 "
-                                    placeholder="Write here..."
-                                    required
-                                />
-                                <label
-                                    htmlFor="step11"
-                                    className="absolute left-0 -top-3.5  text-gray-200 text-lg peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-200  peer-focus:text-lg">
-                                    1.
-                                </label>
+                        initial={{opacity: 0, y: 20}}
+                        whileInView={{opacity: 1, y: 0}}
+                        transition={{duration: 0.5, delay: 0.1}}
+                        viewport={{once: true}}
+                        className="bg-gradient-to-br from-primary to-primary/80 border border-gray-700/50 rounded-3xl p-6 md:p-8">
+                        <div className="flex items-start gap-4 mb-6">
+                            <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-lg">
+                                1
                             </div>
-                            <div className="relative mt-3">
-                                <input
-                                    id="step12"
-                                    name="step12"
-                                    type="text"
-                                    className="peer placeholder-transparent bg-secondary h-10 w-full border-b-2  border-gray-600 text-gray-200 focus:outline-none placeholder:text-gray-400 pl-4 "
-                                    placeholder="Write here..."
-                                    required
-                                />
-                                <label
-                                    htmlFor="step12"
-                                    className="absolute left-0 -top-3.5  text-gray-200 text-lg peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-200  peer-focus:text-lg">
-                                    2.
-                                </label>
-                            </div>
-                            <div className="relative mt-3">
-                                <input
-                                    id="step13"
-                                    name="step13"
-                                    type="text"
-                                    className="peer placeholder-transparent bg-secondary h-10 w-full border-b-2  border-gray-600 text-gray-200 focus:outline-none placeholder:text-gray-400 pl-4 "
-                                    placeholder="Write here..."
-                                    required
-                                />
-                                <label
-                                    htmlFor="step13"
-                                    className="absolute left-0 -top-3.5  text-gray-200 text-lg peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-200  peer-focus:text-lg">
-                                    3.
-                                </label>
+                            <div className="flex-1">
+                                <h3 className="text-xl font-bold text-purple-400 mb-2">
+                                    I am feeling {mood.toLowerCase()} because
+                                </h3>
+                                <p className="text-gray-400 text-sm">
+                                    List specific reasons, situations, or
+                                    thoughts that are contributing to your
+                                    stress. Be honest and detailed about what's
+                                    on your mind.
+                                </p>
                             </div>
                         </div>
-                    </motion.div>
-                    <motion.div
-                        className=" text-lg mb-4"
-                        whileInView={{opacity: [0, 1], y: [0, -20]}}
-                        transition={{duration: 0.7, delay: 0.2}}>
-                        <h3 className="font-semibold text-gray-200">
-                            2. How these stressors are affecting me:
-                        </h3>
-                        <p>
-                            Describe the impact of each stressor on your
-                            emotions, physical sensations, and overall
-                            well-being.
-                        </p>
-                        <div className="grid md:grid-cols-3 gap-10">
-                            <div className="relative mt-3">
-                                <input
-                                    id="step21"
-                                    name="step21"
-                                    type="text"
-                                    className="peer placeholder-transparent bg-secondary h-10 w-full border-b-2  border-gray-600 text-gray-200 focus:outline-none placeholder:text-gray-400 pl-4 "
-                                    placeholder="Write here..."
-                                    required
-                                />
-                                <label
-                                    htmlFor="step21"
-                                    className="absolute left-0 -top-3.5  text-gray-200 text-lg peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-200  peer-focus:text-lg">
-                                    1.
-                                </label>
-                            </div>
-                            <div className="relative mt-3">
-                                <input
-                                    id="step22"
-                                    name="step22"
-                                    type="text"
-                                    className="peer placeholder-transparent bg-secondary h-10 w-full border-b-2  border-gray-600 text-gray-200 focus:outline-none placeholder:text-gray-400 pl-4 "
-                                    placeholder="Write here..."
-                                    required
-                                />
-                                <label
-                                    htmlFor="step22"
-                                    className="absolute left-0 -top-3.5  text-gray-200 text-lg peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-200  peer-focus:text-lg">
-                                    2.
-                                </label>
-                            </div>
-                            <div className="relative mt-3">
-                                <input
-                                    id="step23"
-                                    name="step23"
-                                    type="text"
-                                    className="peer placeholder-transparent bg-secondary h-10 w-full border-b-2  border-gray-600 text-gray-200 focus:outline-none placeholder:text-gray-400 pl-4 "
-                                    placeholder="Write here..."
-                                    required
-                                />
-                                <label
-                                    htmlFor="step23"
-                                    className="absolute left-0 -top-3.5  text-gray-200 text-lg peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-200  peer-focus:text-lg">
-                                    3.
-                                </label>
-                            </div>
+                        <div className="grid md:grid-cols-3 gap-4">
+                            {[1, 2, 3].map((num) => (
+                                <div key={num}>
+                                    <input
+                                        id={`step1${num}`}
+                                        name={`step1${num}`}
+                                        type="text"
+                                        className="w-full bg-primary/60 border border-gray-700/50 rounded-xl px-4 py-3 text-gray-200 placeholder:text-gray-500 focus:outline-none focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 transition-all"
+                                        placeholder={`Reason ${num}...`}
+                                        required
+                                    />
+                                </div>
+                            ))}
                         </div>
                     </motion.div>
+
+                    {/* Step 2 */}
                     <motion.div
-                        className=" text-lg mb-4"
-                        whileInView={{opacity: [0, 1], y: [0, -20]}}
-                        transition={{duration: 0.7, delay: 0.3}}>
-                        <h3 className="font-semibold text-gray-200">
-                            3. My emotions right now:
-                        </h3>
-                        <p>
-                            Use words to express your emotions. Are you feeling
-                            anxious, overwhelmed, frustrated, or a mix of
-                            emotions?
-                        </p>
-                        <div className="grid md:grid-cols-3 gap-10">
-                            <div className="relative mt-3">
-                                <input
-                                    id="step31"
-                                    name="step31"
-                                    type="text"
-                                    className="peer placeholder-transparent bg-secondary h-10 w-full border-b-2  border-gray-600 text-gray-200 focus:outline-none placeholder:text-gray-400 pl-4 "
-                                    placeholder="Write here..."
-                                    required
-                                />
-                                <label
-                                    htmlFor="step31"
-                                    className="absolute left-0 -top-3.5  text-gray-200 text-lg peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-200  peer-focus:text-lg">
-                                    1.
-                                </label>
+                        initial={{opacity: 0, y: 20}}
+                        whileInView={{opacity: 1, y: 0}}
+                        transition={{duration: 0.5, delay: 0.2}}
+                        viewport={{once: true}}
+                        className="bg-gradient-to-br from-primary to-primary/80 border border-gray-700/50 rounded-3xl p-6 md:p-8">
+                        <div className="flex items-start gap-4 mb-6">
+                            <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-lg">
+                                2
                             </div>
-                            <div className="relative mt-3">
-                                <input
-                                    id="step32"
-                                    name="step32"
-                                    type="text"
-                                    className="peer placeholder-transparent bg-secondary h-10 w-full border-b-2  border-gray-600 text-gray-200 focus:outline-none placeholder:text-gray-400 pl-4 "
-                                    placeholder="Write here..."
-                                    required
-                                />
-                                <label
-                                    htmlFor="step32"
-                                    className="absolute left-0 -top-3.5  text-gray-200 text-lg peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-200  peer-focus:text-lg">
-                                    2.
-                                </label>
-                            </div>
-                            <div className="relative mt-3">
-                                <input
-                                    id="step33"
-                                    name="step33"
-                                    type="text"
-                                    className="peer placeholder-transparent bg-secondary h-10 w-full border-b-2  border-gray-600 text-gray-200 focus:outline-none placeholder:text-gray-400 pl-4 "
-                                    placeholder="Write here..."
-                                    required
-                                />
-                                <label
-                                    htmlFor="step33"
-                                    className="absolute left-0 -top-3.5  text-gray-200 text-lg peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-200  peer-focus:text-lg">
-                                    3.
-                                </label>
+                            <div className="flex-1">
+                                <h3 className="text-xl font-bold text-purple-400 mb-2">
+                                    How these stressors are affecting me
+                                </h3>
+                                <p className="text-gray-400 text-sm">
+                                    Describe the impact of each stressor on your
+                                    emotions, physical sensations, and overall
+                                    well-being.
+                                </p>
                             </div>
                         </div>
-                    </motion.div>
-                    <motion.div
-                        className=" text-lg mb-4"
-                        whileInView={{opacity: [0, 1], y: [0, -20]}}
-                        transition={{duration: 0.7, delay: 0.3}}>
-                        <h3 className="font-semibold text-gray-200">
-                            4. How these stressors are affecting me:
-                        </h3>
-                        <p>
-                            Identify any positive aspects of your situation or
-                            potential coping strategies that may help you
-                            navigate these stressors.
-                        </p>
-                        <div className="grid md:grid-cols-3 gap-10">
-                            <div className="relative mt-3">
-                                <input
-                                    id="step41"
-                                    name="step41"
-                                    type="text"
-                                    className="peer placeholder-transparent bg-secondary h-10 w-full border-b-2  border-gray-600 text-gray-200 focus:outline-none placeholder:text-gray-400 pl-4 "
-                                    placeholder="Write here..."
-                                    required
-                                />
-                                <label
-                                    htmlFor="step41"
-                                    className="absolute left-0 -top-3.5  text-gray-200 text-lg peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-200  peer-focus:text-lg">
-                                    1.
-                                </label>
-                            </div>
-                            <div className="relative mt-3">
-                                <input
-                                    id="step42"
-                                    name="step42"
-                                    type="text"
-                                    className="peer placeholder-transparent bg-secondary h-10 w-full border-b-2  border-gray-600 text-gray-200 focus:outline-none placeholder:text-gray-400 pl-4 "
-                                    placeholder="Write here..."
-                                    required
-                                />
-                                <label
-                                    htmlFor="step42"
-                                    className="absolute left-0 -top-3.5  text-gray-200 text-lg peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-200  peer-focus:text-lg">
-                                    2.
-                                </label>
-                            </div>
-                            <div className="relative mt-3">
-                                <input
-                                    id="step43"
-                                    name="step43"
-                                    type="text"
-                                    className="peer placeholder-transparent bg-secondary h-10 w-full border-b-2  border-gray-600 text-gray-200 focus:outline-none placeholder:text-gray-400 pl-4 "
-                                    placeholder="Write here..."
-                                    required
-                                />
-                                <label
-                                    htmlFor="step43"
-                                    className="absolute left-0 -top-3.5  text-gray-200 text-lg peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-200  peer-focus:text-lg">
-                                    3.
-                                </label>
-                            </div>
+                        <div className="grid md:grid-cols-3 gap-4">
+                            {[1, 2, 3].map((num) => (
+                                <div key={num}>
+                                    <input
+                                        id={`step2${num}`}
+                                        name={`step2${num}`}
+                                        type="text"
+                                        className="w-full bg-primary/60 border border-gray-700/50 rounded-xl px-4 py-3 text-gray-200 placeholder:text-gray-500 focus:outline-none focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 transition-all"
+                                        placeholder={`Impact ${num}...`}
+                                        required
+                                    />
+                                </div>
+                            ))}
                         </div>
                     </motion.div>
+                    {/* Step 3 */}
                     <motion.div
-                        className=" text-lg mb-4"
-                        whileInView={{opacity: [0, 1], y: [0, -20]}}
-                        transition={{duration: 0.7, delay: 0.4}}>
-                        <h3 className="font-semibold text-gray-200">
-                            5. Actions I can take to alleviate stress:
-                        </h3>
-                        <p>
-                            List practical steps or actions you can take to
-                            address each stressor and improve your overall
-                            well-being.
-                        </p>
-                        <div className="grid md:grid-cols-3 gap-10">
-                            <div className="relative mt-3">
-                                <input
-                                    id="step51"
-                                    name="step51"
-                                    type="text"
-                                    className="peer placeholder-transparent bg-secondary h-10 w-full border-b-2  border-gray-600 text-gray-200 focus:outline-none placeholder:text-gray-400 pl-4 "
-                                    placeholder="Write here..."
-                                    required
-                                />
-                                <label
-                                    htmlFor="step51"
-                                    className="absolute left-0 -top-3.5  text-gray-200 text-lg peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-200  peer-focus:text-lg">
-                                    1.
-                                </label>
+                        initial={{opacity: 0, y: 20}}
+                        whileInView={{opacity: 1, y: 0}}
+                        transition={{duration: 0.5, delay: 0.3}}
+                        viewport={{once: true}}
+                        className="bg-gradient-to-br from-primary to-primary/80 border border-gray-700/50 rounded-3xl p-6 md:p-8">
+                        <div className="flex items-start gap-4 mb-6">
+                            <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-lg">
+                                3
                             </div>
-                            <div className="relative mt-3">
-                                <input
-                                    id="step52"
-                                    name="step52"
-                                    type="text"
-                                    className="peer placeholder-transparent bg-secondary h-10 w-full border-b-2  border-gray-600 text-gray-200 focus:outline-none placeholder:text-gray-400 pl-4 "
-                                    placeholder="Write here..."
-                                    required
-                                />
-                                <label
-                                    htmlFor="step52"
-                                    className="absolute left-0 -top-3.5  text-gray-200 text-lg peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-200  peer-focus:text-lg">
-                                    2.
-                                </label>
-                            </div>
-                            <div className="relative mt-3">
-                                <input
-                                    id="step53"
-                                    name="step53"
-                                    type="text"
-                                    className="peer placeholder-transparent bg-secondary h-10 w-full border-b-2  border-gray-600 text-gray-200 focus:outline-none placeholder:text-gray-400 pl-4 "
-                                    placeholder="Write here..."
-                                    required
-                                />
-                                <label
-                                    htmlFor="step53"
-                                    className="absolute left-0 -top-3.5  text-gray-200 text-lg peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-200  peer-focus:text-lg">
-                                    3.
-                                </label>
+                            <div className="flex-1">
+                                <h3 className="text-xl font-bold text-purple-400 mb-2">
+                                    My emotions right now
+                                </h3>
+                                <p className="text-gray-400 text-sm">
+                                    Use words to express your emotions. Are you
+                                    feeling anxious, overwhelmed, frustrated, or
+                                    a mix of emotions?
+                                </p>
                             </div>
                         </div>
-                    </motion.div>
-                    <motion.div
-                        className=" text-lg mb-4"
-                        whileInView={{opacity: [0, 1], y: [0, -20]}}
-                        transition={{duration: 0.7, delay: 0.5}}>
-                        <h3 className="font-semibold text-gray-200">
-                            6. Affirmations for self-compassion:
-                        </h3>
-                        <p>
-                            Write down positive affirmations to encourage
-                            self-compassion and self-kindness.
-                        </p>
-                        <div className="grid md:grid-cols-3 gap-10">
-                            <div className="relative mt-3">
-                                <input
-                                    id="step61"
-                                    name="step61"
-                                    type="text"
-                                    className="peer placeholder-transparent bg-secondary h-10 w-full border-b-2  border-gray-600 text-gray-200 focus:outline-none placeholder:text-gray-400 pl-4 "
-                                    placeholder="Write here..."
-                                    required
-                                />
-                                <label
-                                    htmlFor="step61"
-                                    className="absolute left-0 -top-3.5  text-gray-200 text-lg peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-200  peer-focus:text-lg">
-                                    1.
-                                </label>
-                            </div>
-                            <div className="relative mt-3">
-                                <input
-                                    id="step62"
-                                    name="step62"
-                                    type="text"
-                                    className="peer placeholder-transparent bg-secondary h-10 w-full border-b-2  border-gray-600 text-gray-200 focus:outline-none placeholder:text-gray-400 pl-4 "
-                                    placeholder="Write here..."
-                                    required
-                                />
-                                <label
-                                    htmlFor="step62"
-                                    className="absolute left-0 -top-3.5  text-gray-200 text-lg peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-200  peer-focus:text-lg">
-                                    2.
-                                </label>
-                            </div>
-                            <div className="relative mt-3">
-                                <input
-                                    id="step63"
-                                    name="step63"
-                                    type="text"
-                                    className="peer placeholder-transparent bg-secondary h-10 w-full border-b-2  border-gray-600 text-gray-200 focus:outline-none placeholder:text-gray-400 pl-4 "
-                                    placeholder="Write here..."
-                                    required
-                                />
-                                <label
-                                    htmlFor="step63"
-                                    className="absolute left-0 -top-3.5  text-gray-200 text-lg peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-200  peer-focus:text-lg">
-                                    3.
-                                </label>
-                            </div>
+                        <div className="grid md:grid-cols-3 gap-4">
+                            {[1, 2, 3].map((num) => (
+                                <div key={num}>
+                                    <input
+                                        id={`step3${num}`}
+                                        name={`step3${num}`}
+                                        type="text"
+                                        className="w-full bg-primary/60 border border-gray-700/50 rounded-xl px-4 py-3 text-gray-200 placeholder:text-gray-500 focus:outline-none focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 transition-all"
+                                        placeholder={`Emotion ${num}...`}
+                                        required
+                                    />
+                                </div>
+                            ))}
                         </div>
                     </motion.div>
+                    {/* Step 4 */}
                     <motion.div
-                        className=" text-lg mb-4"
-                        whileInView={{opacity: [0, 1], y: [0, -20]}}
-                        transition={{duration: 0.7, delay: 0.6}}>
-                        <h3 className="font-semibold text-gray-200">
-                            7. Gratitude:
-                        </h3>
-                        <p>
-                            Reflect on at least one thing you are grateful for,
-                            even in the midst of stress.
-                        </p>
-                        <div className="grid gap-10">
-                            <div className="relative mt-3">
-                                <input
-                                    id="step71"
-                                    name="step71"
-                                    type="text"
-                                    className="peer placeholder-transparent bg-secondary h-10 w-full border-b-2  border-gray-600 text-gray-200 focus:outline-none placeholder:text-gray-400 pl-4 "
-                                    placeholder="Write here..."
-                                    required
-                                />
-                                <label
-                                    htmlFor="step71"
-                                    className="absolute left-0 -top-3.5  text-gray-200 text-lg peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-200  peer-focus:text-lg">
-                                    1.
-                                </label>
+                        initial={{opacity: 0, y: 20}}
+                        whileInView={{opacity: 1, y: 0}}
+                        transition={{duration: 0.5, delay: 0.4}}
+                        viewport={{once: true}}
+                        className="bg-gradient-to-br from-primary to-primary/80 border border-gray-700/50 rounded-3xl p-6 md:p-8">
+                        <div className="flex items-start gap-4 mb-6">
+                            <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-lg">
+                                4
+                            </div>
+                            <div className="flex-1">
+                                <h3 className="text-xl font-bold text-purple-400 mb-2">
+                                    Positive aspects and coping strategies
+                                </h3>
+                                <p className="text-gray-400 text-sm">
+                                    Identify any positive aspects of your
+                                    situation or potential coping strategies
+                                    that may help you navigate these stressors.
+                                </p>
                             </div>
                         </div>
-                    </motion.div>
-                    <motion.div
-                        className=" text-lg mb-4"
-                        whileInView={{opacity: [0, 1], y: [0, -20]}}
-                        transition={{duration: 0.7, delay: 0.7}}>
-                        <h3 className="font-semibold text-gray-200">
-                            8. Closing Thoughts::
-                        </h3>
-                        <p>
-                            Summarize your feelings, express any hopes or
-                            intentions for the future, and acknowledge that it's
-                            okay to experience stress.
-                        </p>
-                        <div className="grid gap-10">
-                            <div className="relative mt-3">
-                                <input
-                                    id="step81"
-                                    name="step81"
-                                    type="text"
-                                    className="peer placeholder-transparent bg-secondary h-10 w-full border-b-2  border-gray-600 text-gray-200 focus:outline-none placeholder:text-gray-400 pl-4 "
-                                    placeholder="Write here..."
-                                    required
-                                />
-                                <label
-                                    htmlFor="step81"
-                                    className="absolute left-0 -top-3.5  text-gray-200 text-lg peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-200  peer-focus:text-lg">
-                                    1.
-                                </label>
-                            </div>
+                        <div className="grid md:grid-cols-3 gap-4">
+                            {[1, 2, 3].map((num) => (
+                                <div key={num}>
+                                    <input
+                                        id={`step4${num}`}
+                                        name={`step4${num}`}
+                                        type="text"
+                                        className="w-full bg-primary/60 border border-gray-700/50 rounded-xl px-4 py-3 text-gray-200 placeholder:text-gray-500 focus:outline-none focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 transition-all"
+                                        placeholder={`Strategy ${num}...`}
+                                        required
+                                    />
+                                </div>
+                            ))}
                         </div>
                     </motion.div>
-                    <div>
+                    {/* Step 5 */}
+                    <motion.div
+                        initial={{opacity: 0, y: 20}}
+                        whileInView={{opacity: 1, y: 0}}
+                        transition={{duration: 0.5, delay: 0.5}}
+                        viewport={{once: true}}
+                        className="bg-gradient-to-br from-primary to-primary/80 border border-gray-700/50 rounded-3xl p-6 md:p-8">
+                        <div className="flex items-start gap-4 mb-6">
+                            <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-lg">
+                                5
+                            </div>
+                            <div className="flex-1">
+                                <h3 className="text-xl font-bold text-purple-400 mb-2">
+                                    Actions I can take to alleviate stress
+                                </h3>
+                                <p className="text-gray-400 text-sm">
+                                    List practical steps or actions you can take
+                                    to address each stressor and improve your
+                                    overall well-being.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="grid md:grid-cols-3 gap-4">
+                            {[1, 2, 3].map((num) => (
+                                <div key={num}>
+                                    <input
+                                        id={`step5${num}`}
+                                        name={`step5${num}`}
+                                        type="text"
+                                        className="w-full bg-primary/60 border border-gray-700/50 rounded-xl px-4 py-3 text-gray-200 placeholder:text-gray-500 focus:outline-none focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 transition-all"
+                                        placeholder={`Action ${num}...`}
+                                        required
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                    </motion.div>
+                    {/* Step 6 */}
+                    <motion.div
+                        initial={{opacity: 0, y: 20}}
+                        whileInView={{opacity: 1, y: 0}}
+                        transition={{duration: 0.5, delay: 0.6}}
+                        viewport={{once: true}}
+                        className="bg-gradient-to-br from-primary to-primary/80 border border-gray-700/50 rounded-3xl p-6 md:p-8">
+                        <div className="flex items-start gap-4 mb-6">
+                            <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-lg">
+                                6
+                            </div>
+                            <div className="flex-1">
+                                <h3 className="text-xl font-bold text-purple-400 mb-2">
+                                    Affirmations for self-compassion
+                                </h3>
+                                <p className="text-gray-400 text-sm">
+                                    Write down positive affirmations to
+                                    encourage self-compassion and self-kindness.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="grid md:grid-cols-3 gap-4">
+                            {[1, 2, 3].map((num) => (
+                                <div key={num}>
+                                    <input
+                                        id={`step6${num}`}
+                                        name={`step6${num}`}
+                                        type="text"
+                                        className="w-full bg-primary/60 border border-gray-700/50 rounded-xl px-4 py-3 text-gray-200 placeholder:text-gray-500 focus:outline-none focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 transition-all"
+                                        placeholder={`Affirmation ${num}...`}
+                                        required
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                    </motion.div>
+                    {/* Step 7 */}
+                    <motion.div
+                        initial={{opacity: 0, y: 20}}
+                        whileInView={{opacity: 1, y: 0}}
+                        transition={{duration: 0.5, delay: 0.7}}
+                        viewport={{once: true}}
+                        className="bg-gradient-to-br from-primary to-primary/80 border border-gray-700/50 rounded-3xl p-6 md:p-8">
+                        <div className="flex items-start gap-4 mb-6">
+                            <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-lg">
+                                7
+                            </div>
+                            <div className="flex-1">
+                                <h3 className="text-xl font-bold text-purple-400 mb-2">
+                                    Gratitude
+                                </h3>
+                                <p className="text-gray-400 text-sm">
+                                    Reflect on at least one thing you are
+                                    grateful for, even in the midst of stress.
+                                </p>
+                            </div>
+                        </div>
+                        <input
+                            id="step71"
+                            name="step71"
+                            type="text"
+                            className="w-full bg-primary/60 border border-gray-700/50 rounded-xl px-4 py-3 text-gray-200 placeholder:text-gray-500 focus:outline-none focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 transition-all"
+                            placeholder="I am grateful for..."
+                            required
+                        />
+                    </motion.div>
+                    {/* Step 8 */}
+                    <motion.div
+                        initial={{opacity: 0, y: 20}}
+                        whileInView={{opacity: 1, y: 0}}
+                        transition={{duration: 0.5, delay: 0.8}}
+                        viewport={{once: true}}
+                        className="bg-gradient-to-br from-primary to-primary/80 border border-gray-700/50 rounded-3xl p-6 md:p-8">
+                        <div className="flex items-start gap-4 mb-6">
+                            <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-lg">
+                                8
+                            </div>
+                            <div className="flex-1">
+                                <h3 className="text-xl font-bold text-purple-400 mb-2">
+                                    Closing Thoughts
+                                </h3>
+                                <p className="text-gray-400 text-sm">
+                                    Summarize your feelings, express any hopes
+                                    or intentions for the future, and
+                                    acknowledge that it's okay to experience
+                                    stress.
+                                </p>
+                            </div>
+                        </div>
+                        <textarea
+                            id="step81"
+                            name="step81"
+                            rows="4"
+                            className="w-full bg-primary/60 border border-gray-700/50 rounded-xl px-4 py-3 text-gray-200 placeholder:text-gray-500 focus:outline-none focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 transition-all resize-none"
+                            placeholder="Your closing thoughts..."
+                            required
+                        />
+                    </motion.div>
+                    {/* Submit Button */}
+                    <motion.div
+                        initial={{opacity: 0, y: 20}}
+                        whileInView={{opacity: 1, y: 0}}
+                        transition={{duration: 0.5, delay: 0.9}}
+                        viewport={{once: true}}
+                        className="flex justify-center pt-4">
                         <button
                             type="submit"
-                            className="btn-primary px-8 py-2 text-lg">
-                            Submit
+                            className="group relative px-12 py-4 bg-gradient-to-r from-purple-500 to-pink-500  font-bold text-lg rounded-2xl transition-all shadow-xl hover:shadow-2xl hover:shadow-purple-500/50 hover:scale-105">
+                            <p className="relative z-10">
+                                Submit Your Reflection
+                            </p>
+                            <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-pink-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity blur-xl"></div>
                         </button>
-                    </div>
+                    </motion.div>
                 </form>
             </div>
         </Container>

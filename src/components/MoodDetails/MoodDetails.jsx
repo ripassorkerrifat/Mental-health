@@ -34,48 +34,68 @@ const MoodDetails = () => {
 
     return (
         <Container>
-            <div className="text-gray-200">
-                <div>
-                    <Heading title={`You are feeling ${currentData?.mood}.`} />
-                    <motion.h3
-                        whileInView={{opacity: [0, 1], x: [-20, 0]}}
-                        transition={{duration: 0.7, delay: 0}}
-                        initial={{opacity: 0}}
-                        className=" text-xl mt-2">
-                        Here are some tips for you.
-                    </motion.h3>
-                    <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-10 mt-8">
-                        {currentData?.guides?.map((dt, i) => (
-                            <motion.div
-                                key={i}
-                                onClick={() => {
-                                    setCurrentGuide(dt);
-                                    setShowModal(true);
-                                }}
-                                whileInView={{opacity: [0, 1], y: [0, -20]}}
-                                transition={{duration: 0.7, delay: 0.4}}
-                                initial={{opacity: 0}}
-                                className="bg-primary rounded-md p-6 text-center flex justify-center items-center">
-                                <h2 className=" text-lg font-semibold">
-                                    <b>{i + 1}</b> {".  "} {dt.heading}
-                                </h2>
-                            </motion.div>
-                        ))}
+            <div className="text-gray-200 py-16">
+                {/* Header */}
+                <motion.div
+                    whileInView={{opacity: [0, 1], y: [30, 0]}}
+                    transition={{duration: 0.7}}
+                    initial={{opacity: 0}}
+                    className="text-center mb-12">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                        You're feeling{" "}
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
+                            {currentData?.mood}
+                        </span>
+                    </h1>
+                    <p className="text-xl text-gray-400">
+                        Here are some helpful tips to support you
+                    </p>
+                </motion.div>
+
+                {/* Tips Grid */}
+                <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
+                    {currentData?.guides?.map((dt, i) => (
                         <motion.div
-                            whileInView={{opacity: [0, 1], y: [0, -20]}}
-                            transition={{duration: 0.7, delay: 0.4}}
+                            key={i}
+                            whileInView={{opacity: [0, 1], y: [30, 0]}}
+                            transition={{duration: 0.5, delay: i * 0.1}}
                             initial={{opacity: 0}}
-                            className="bg-primary rounded-md p-6 text-center flex justify-center items-center">
-                            <Link
-                                to={`/write-dow-the-reason-of/${currentData?.mood}`}
-                                className=" text-lg font-semibold">
-                                <b>{currentData?.guides?.length + 1}</b> {".  "}{" "}
-                                Write down the reason.
-                            </Link>
+                            onClick={() => {
+                                setCurrentGuide(dt);
+                                setShowModal(true);
+                            }}
+                            className="group cursor-pointer">
+                            <div className="bg-gradient-to-br from-primary to-primary/80 border border-gray-700/50 rounded-2xl p-6 h-full hover:border-blue-500/30 transition-all hover:shadow-xl hover:shadow-blue-500/10 flex flex-col items-center justify-center text-center">
+                                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-white font-bold text-xl mb-4 group-hover:scale-110 transition-transform">
+                                    {i + 1}
+                                </div>
+                                <h3 className="text-lg font-semibold text-gray-200 group-hover:text-blue-400 transition-colors">
+                                    {dt.heading}
+                                </h3>
+                            </div>
                         </motion.div>
-                    </div>
+                    ))}
+                    
+                    {/* Write Reason Card */}
+                    <motion.div
+                        whileInView={{opacity: [0, 1], y: [30, 0]}}
+                        transition={{duration: 0.5, delay: currentData?.guides?.length * 0.1}}
+                        initial={{opacity: 0}}
+                        className="group">
+                        <Link to={`/write-dow-the-reason-of/${currentData?.mood}`}>
+                            <div className="bg-gradient-to-br from-pink-900/40 to-purple-900/40 border border-pink-500/30 rounded-2xl p-6 h-full hover:border-pink-500/50 transition-all hover:shadow-xl hover:shadow-pink-500/10 flex flex-col items-center justify-center text-center">
+                                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-pink-500 to-purple-500 flex items-center justify-center text-white font-bold text-xl mb-4 group-hover:scale-110 transition-transform">
+                                    {(currentData?.guides?.length || 0) + 1}
+                                </div>
+                                <h3 className="text-lg font-semibold text-gray-200 group-hover:text-pink-400 transition-colors">
+                                    Write down the reason
+                                </h3>
+                            </div>
+                        </Link>
+                    </motion.div>
                 </div>
             </div>
+            
             {showModal && (
                 <MoodDetailModals
                     currentGuide={currentGuide}

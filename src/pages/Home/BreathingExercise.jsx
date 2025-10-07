@@ -33,44 +33,54 @@ const BreathingExercise = () => {
     return (
         <div className={`${pathname == "/" && " bg-primary"} py-20`}>
             <div className="container">
-                <div>
-                    <Heading title={"Some Breathing Exercises"} />
-                </div>
-                <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-10">
+                <motion.div
+                    whileInView={{opacity: [0, 1], y: [30, 0]}}
+                    transition={{duration: 0.7}}
+                    initial={{opacity: 0}}
+                    className="text-center mb-12">
+                    <h2 className="text-4xl md:text-5xl font-bold text-gray-200 mb-4">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500">
+                            Breathing
+                        </span>{" "}
+                        Exercises
+                    </h2>
+                    <p className="text-gray-400 text-lg">
+                        Practice mindful breathing to reduce stress and find calm
+                    </p>
+                </motion.div>
+                <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
                     {pathname === "/breathing-exercises" ? (
                         <>
                             {" "}
                             {data?.map((d, i) => (
                                 <motion.div
-                                    whileInView={{opacity: [0, 1], x: [-20, 0]}}
-                                    transition={{duration: 0.7, delay: d.deley}}
+                                    whileInView={{opacity: [0, 1], y: [30, 0]}}
+                                    transition={{duration: 0.5, delay: i * 0.05}}
                                     initial={{opacity: 0}}
                                     key={i}
-                                    className="flex flex-col items-center justify-center text-center bg-secondary border border-gray-700 shadow-sm rounded-lg md:p-0 p-4">
-                                    <div className="p-4 md:p-5">
-                                        <h3 className="text-lg font-bold text-gray-100">
+                                    className="group cursor-pointer">
+                                    <div className="bg-gradient-to-br from-primary to-primary/80 border border-gray-700/50 rounded-2xl p-6 h-full hover:border-cyan-500/30 transition-all hover:shadow-xl hover:shadow-cyan-500/10">
+                                        <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-cyan-500/30 group-hover:scale-110 transition-transform">
+                                            <span className="text-3xl">💨</span>
+                                        </div>
+                                        <h3 className="text-xl font-bold text-gray-200 mb-3 text-center group-hover:text-cyan-400 transition-colors">
                                             {d?.title}
                                         </h3>
-                                        <p className="text-gray-200 text-base">
+                                        <p className="text-gray-400 text-sm text-center leading-relaxed mb-4">
                                             {d?.desc?.length > 100
                                                 ? `${d?.desc?.slice(0, 100)}...`
-                                                : desc}
+                                                : d?.desc}
                                         </p>
-                                        <div className="mt-2  text-base font-semibold rounded-lg ">
-                                            <button
-                                                onClick={() => {
-                                                    setShowModal(true);
-                                                    setCurrentData(d);
-                                                }}
-                                                type="submit"
-                                                className="inline-flex items-center gap-x-1">
-                                                <span> Read more</span>
-                                                <IoIosArrowForward
-                                                    size={16}
-                                                    className="text-gray-200"
-                                                />
-                                            </button>
-                                        </div>
+                                        <button
+                                            onClick={() => {
+                                                setShowModal(true);
+                                                setCurrentData(d);
+                                            }}
+                                            type="button"
+                                            className="w-full inline-flex items-center justify-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold text-sm transition-colors group-hover:gap-3">
+                                            Learn More
+                                            <IoIosArrowForward size={18} />
+                                        </button>
                                     </div>
                                 </motion.div>
                             ))}
@@ -80,34 +90,32 @@ const BreathingExercise = () => {
                             {data?.slice(0, 8)?.map((d, i) => (
                                 <motion.div
                                     key={i}
-                                    whileInView={{opacity: [0, 1], x: [-20, 0]}}
-                                    transition={{duration: 0.7, delay: d.deley}}
+                                    whileInView={{opacity: [0, 1], y: [30, 0]}}
+                                    transition={{duration: 0.5, delay: i * 0.05}}
                                     initial={{opacity: 0}}
-                                    className="flex flex-col items-center justify-center text-center bg-secondary border border-gray-700 shadow-sm rounded-lg md:p-0 p-4">
-                                    <div className="p-4 md:p-5">
-                                        <h3 className="text-lg font-bold text-gray-100">
+                                    className="group cursor-pointer">
+                                    <div className="bg-gradient-to-br from-secondary to-secondary/80 border border-gray-700/50 rounded-2xl p-6 h-full hover:border-cyan-500/30 transition-all hover:shadow-xl hover:shadow-cyan-500/10">
+                                        <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-cyan-500/30 group-hover:scale-110 transition-transform">
+                                            <span className="text-3xl">💨</span>
+                                        </div>
+                                        <h3 className="text-xl font-bold text-gray-200 mb-3 text-center group-hover:text-cyan-400 transition-colors">
                                             {d?.title}
                                         </h3>
-                                        <p className="text-gray-200 text-base">
+                                        <p className="text-gray-400 text-sm text-center leading-relaxed mb-4">
                                             {d?.desc?.length > 100
                                                 ? `${d?.desc?.slice(0, 100)}...`
-                                                : desc}
+                                                : d?.desc}
                                         </p>
-                                        <div className="mt-2  text-base font-semibold rounded-lg ">
-                                            <button
-                                                onClick={() => {
-                                                    setShowModal(true);
-                                                    setCurrentData(d);
-                                                }}
-                                                type="submit"
-                                                className="inline-flex items-center gap-x-1">
-                                                <span> Read more</span>
-                                                <IoIosArrowForward
-                                                    size={16}
-                                                    className="text-gray-200"
-                                                />
-                                            </button>
-                                        </div>
+                                        <button
+                                            onClick={() => {
+                                                setShowModal(true);
+                                                setCurrentData(d);
+                                            }}
+                                            type="button"
+                                            className="w-full inline-flex items-center justify-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold text-sm transition-colors group-hover:gap-3">
+                                            Learn More
+                                            <IoIosArrowForward size={18} />
+                                        </button>
                                     </div>
                                 </motion.div>
                             ))}
